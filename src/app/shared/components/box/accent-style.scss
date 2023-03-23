@@ -1,0 +1,15 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+$main-color: $green-500;
+
+.accent-box-container {
+    background-color: $main-color;
+}
+
+.accent-box-icon-container {
+    background-color: $green-100;
+}
+
+.accent-box-icon {
+    color: $main-color;
+}

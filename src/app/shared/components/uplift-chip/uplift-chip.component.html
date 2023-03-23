@@ -1,0 +1,9 @@
+<mat-chip-list>
+    <mat-chip class="uplift-chip" [ngClass]="getColorCodingClass()" 
+        [matTooltip]="getUpliftPercentTooltip()" 
+        matTooltipPosition="below"
+        matTooltipClass="pp-tooltip">
+        <mat-icon>{{ getIconName() }}</mat-icon>
+        <span class="uplift-value"> {{ getUpliftPercent() }} </span>
+    </mat-chip>
+</mat-chip-list>

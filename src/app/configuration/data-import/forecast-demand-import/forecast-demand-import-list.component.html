@@ -1,0 +1,44 @@
+<div *ngIf="!errorMessage; else errorMessageTemplate">
+    <pp-page-header [title]="title" color="primary">
+        <button class="import-all-button" first-line
+                mat-raised-button color="primary"
+                matTooltip="Import all" 
+                matTooltipPosition="above"
+                matTooltipClass="pp-tooltip"
+                (click)="import('All')">Import all</button>
+    </pp-page-header>
+    <pp-page-body>
+        <div *ngIf="forecastDemandValues && forecastDemandValues.length > 0">
+            <mat-table [dataSource]="forecastDemandValues" class="forecast-table mat-elevation-z0">
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef class="forecast-table-header"> Import type </mat-header-cell>
+                <mat-cell *matCellDef="let element" class="forecast-table-cell forecast-table-cell-content"> {{element}} </mat-cell>
+                </ng-container>
+            
+                <!-- Action Column -->
+                <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef class="forecast-table-header"> Action </mat-header-cell>
+                <mat-cell *matCellDef="let element" class="forecast-table-cell">
+                    <button class="forecast-table-button"
+                            mat-icon-button aria-label="Import"
+                            matTooltip="Import" 
+                            matTooltipPosition="above"
+                            matTooltipClass="pp-tooltip"
+                            (click)="import(element)">
+                            <mat-icon class="forecast-table-icon forecast-table-action-icon">file_upload</mat-icon>
+                        </button>
+                </mat-cell>
+                </ng-container>
+            
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;" class="custom-row"></mat-row>
+            </mat-table>
+        </div>
+        <pp-spinner *ngIf="loading"></pp-spinner>
+    </pp-page-body>              
+</div>
+
+<ng-template #errorMessageTemplate>
+    <pp-error-message [errorMessage]="errorMessage"></pp-error-message>
+</ng-template>

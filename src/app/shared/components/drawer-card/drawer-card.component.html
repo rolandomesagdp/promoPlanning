@@ -1,0 +1,16 @@
+<mat-sidenav-container class="main-container">
+    <mat-sidenav-content>
+        <ng-content select="[mainpane]"></ng-content>
+    </mat-sidenav-content>
+
+    <mat-sidenav class="side-pane" #sidenav 
+        mode="over"
+        position="end" 
+        fixedInViewport="true"
+        autoFocus="false"
+        disableClose="true">
+        <div class="side-pane-container">
+            <ng-content select="[sidepane]"></ng-content>
+        </div>
+    </mat-sidenav>
+</mat-sidenav-container>

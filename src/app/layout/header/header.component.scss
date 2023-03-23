@@ -1,0 +1,48 @@
+@import "../../../themes/pp-colors-palette.scss";
+
+.pp-tool-bar {
+  height: 100%;
+  background-color: $gray-25;
+  color: $gray-dark;
+
+  .header-spacer {
+    flex: 1 1 auto;
+  }
+
+  .menu-toggle-button {
+    color: $gray-dark;
+  }
+
+  .toolsgroup-logo-img-container {
+    width: 180px;
+    height: 24px;
+    margin-left: 1.4%;
+    margin-top: -13px !important;
+  }
+
+  .toolsgroup-logo-img {
+    width: 180px;
+    height: 31px;
+  }
+
+  .promo-planning-logo-container {
+    margin-left: .3%;
+  }
+
+  .promo-planning-logo {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    color: $primary-800;
+  }
+
+  .user-menu-container {
+    margin-right: 2.5%;
+  }
+}
+
+.pp-tool-bar.mat-toolbar-single-row {
+  padding-left: 10px;
+}

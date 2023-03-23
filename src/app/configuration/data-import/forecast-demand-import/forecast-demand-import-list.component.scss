@@ -1,0 +1,54 @@
+@import "../../../../themes/pp-colors-palette.scss";
+
+.mat-column-action {
+    flex: 0 0 100px;
+}
+
+.import-all-button {
+  margin-left: 90%;
+}
+
+  
+    .forecast-table {
+        width: 100%;
+        border: 1px solid $gray-light;
+
+        &-header {
+            color: $black;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 133%;
+        }
+
+        &-cell {
+            text-align: center;
+        }
+
+        &-cell-content {
+            color: $black;
+            font-family: Open Sans;
+            font-family: Open Sans;
+            font-size: 14px;
+            line-height: 142%;
+            letter-spacing: 0.25px;
+        }
+
+        &-button.mat-icon-button {
+            padding: 0;
+            min-width: 0;
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            line-height: 28px;
+            border-radius: 50%;
+        }
+
+        &-icon {
+            font-size: 20px;
+        }
+        &-action-icon {
+            color: $gray-500;
+        }
+    }

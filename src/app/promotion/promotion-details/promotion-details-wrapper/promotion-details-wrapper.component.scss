@@ -1,0 +1,30 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.promotion-details {
+    display: flex;
+    justify-content: flex-start;
+    height: 960px;
+    width: auto;
+
+    &-left-pannel {
+        width: auto;
+        background-color: $white;
+    }
+
+    &-right-pannel {
+        width: 532px;
+    }
+
+    &-devider {
+        &.mat-divider.mat-divider-vertical {
+            border-top: 0;
+            border-right-width: 1px;
+            border-right-style: solid;
+            background-color: $gray-200;
+        }
+    }
+}
+
+.promotion-details-bottom-line {
+    background-color: $gray-200;
+}

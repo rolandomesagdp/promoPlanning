@@ -1,0 +1,47 @@
+@import "../../../../themes/pp-colors-palette.scss";
+
+.date-box-container {
+    position: relative;
+    max-width: 350px;
+    margin-bottom: 5px;
+}
+
+.date-box-label {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-700;
+    letter-spacing: 1.5px;
+    padding-top: 12px;
+    padding-left: 5px;
+}
+
+.date-box-label,.dx-texteditor-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// Changing the icon of the dropdown date picker
+::ng-deep .dx-dropdowneditor .dx-dropdowneditor-icon::before,
+.dx-datebox-calendar.dx-dropdowneditor.dx-dropdowneditor-active
+  .dx-dropdowneditor-icon::before {
+  content: "";
+  font: 23px/23px DXIcons;
+  width: 23px;
+  height: 100%;
+  text-align: center;
+  color: $gray-500;
+}
+
+.week-cell {
+    display: flex;
+}
+
+.week-number {
+    color: $gray-700;
+    font-size: 9px;
+    font-weight: 900;
+}

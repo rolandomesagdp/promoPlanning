@@ -1,0 +1,20 @@
+<div *ngIf="!viewModel.errorMessage; else errorBlock">
+    <h2 class="content-block">{{viewModel.reportPageName}}</h2>
+    <pp-drawer-card>
+        <pp-analytics-filters sidepane></pp-analytics-filters>
+        <div mainpane *ngIf="viewModel.vm$ | async as vm; else spinnerTemplate">
+            <pp-back-button></pp-back-button>
+            <div *ngIf="!viewModel.loading; else spinnerTemplate" class="chart-list-container">
+                <div *ngFor="let chart of vm.charts" [ngClass]="getChartContainerCssClass(chart.printFullScreen)">
+                    <pp-chart-wrapper [chartDataSource]="chart"></pp-chart-wrapper>
+                </div>
+            </div>
+        </div>
+        <ng-template mainpane #spinnerTemplate>
+            <pp-spinner></pp-spinner>
+        </ng-template>
+    </pp-drawer-card>
+</div>
+<ng-template #errorBlock>
+    <pp-error-message [errorMessage]="viewModel.errorMessage"></pp-error-message>
+</ng-template>

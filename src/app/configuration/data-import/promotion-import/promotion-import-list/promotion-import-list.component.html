@@ -1,0 +1,79 @@
+<div *ngIf="promotionImportVM && !promotionImportVM.errorMessage; else errorMessageTemplate">
+    <pp-page-header [title]="title" color="primary">
+        <button class="import-all-button" first-line
+                mat-raised-button color="primary"
+                matTooltip="Import all" 
+                matTooltipPosition="above"
+                matTooltipClass="pp-tooltip"
+                (click)="importAllExternalPromos()">Import all</button>
+    </pp-page-header>
+   
+    <pp-page-body>
+            <pp-spinner *ngIf="promotionImportVM.loading"></pp-spinner>
+            
+            <div *ngIf="promotionImportVM.vm$ | async as importTypeConfig">
+                <mat-table [dataSource]="importTypeConfig" class="mat-elevation-z0 grid-table">
+                    <ng-container matColumnDef="description">
+                      <mat-header-cell *matHeaderCellDef class="grid-table-header"> Import type </mat-header-cell>
+                      <mat-cell *matCellDef="let element" class="grid-table-cell"> {{element.description}} </mat-cell>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="insert_new_record_only">
+                        <mat-header-cell *matHeaderCellDef class="grid-table-header-insert-record"> Insert new record only </mat-header-cell>
+                        <mat-cell *matCellDef="let element" class="grid-table-cell-insert-record"> 
+                            <span *ngIf="element.importType == ImportTypes.IMPORT_ONLY_NEW">
+                                <mat-icon class="green-icon">done</mat-icon>
+                            </span>        
+                        </mat-cell>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="insert_and_overwrite">
+                      <mat-header-cell *matHeaderCellDef class="grid-table-header-insert-record"> Insert and overwrite </mat-header-cell>
+                        <mat-cell *matCellDef="let element" class="grid-table-cell-insert-record"> 
+                          <span *ngIf="element.importType == ImportTypes.IMPORT_AND_OVERRIDE">
+                            <mat-icon class="green-icon">done</mat-icon>
+                          </span>
+                      </mat-cell>
+                    </ng-container>
+                  
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="action">
+                      <mat-header-cell *matHeaderCellDef class="grid-table-header-action"> Actions </mat-header-cell>
+                      <mat-cell *matCellDef="let element" class="grid-table-cell-action">
+                        <button mat-icon-button class="grid-table-button"
+                                aria-label="Edit"
+                                matTooltip="Edit" 
+                                matTooltipPosition="above"
+                                matTooltipClass="pp-tooltip"
+                                (click)="edit(element)">
+                            <mat-icon class="grid-table-icon grid-table-action-icon">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button class="grid-table-button"
+                                matTooltip="Import" 
+                                matTooltipPosition="above"
+                                matTooltipClass="pp-tooltip"
+                                aria-label="Import"
+                                (click)="import(element)">
+                            <mat-icon class="grid-table-icon grid-table-action-icon">file_upload</mat-icon>
+                        </button>
+                        <button mat-icon-button class="grid-table-button"
+                                matTooltip="More info" 
+                                matTooltipPosition="above"
+                                matTooltipClass="pp-tooltip"
+                                aria-label="more"
+                                (click)="showDetails(element)">
+                            <mat-icon class="grid-table-icon grid-table-action-icon">info</mat-icon>
+                        </button> 
+                      </mat-cell>
+                    </ng-container>
+                  
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                  </mat-table>
+    
+            </div>
+    </pp-page-body>
+</div>    
+<ng-template #errorMessageTemplate>
+    <pp-error-message [errorMessage]="promotionImportVM.errorMessage"></pp-error-message>
+</ng-template>

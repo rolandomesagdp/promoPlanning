@@ -1,0 +1,48 @@
+@import "../../../../../themes/pp-colors-palette.scss";
+
+.dialog-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: $gray-900;
+}
+
+.import-edit-content {
+	height: 180px;
+	overflow: hidden !important;
+}
+
+.import-detail-line-container {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 2%;
+	margin-left: 5%;
+}
+
+.import-label {
+    font-family: Open Sans;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: -0.2px;
+	color: $black;
+}
+
+.import-value {
+    margin-left: 2%;
+    margin-bottom: 1%;
+    font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	letter-spacing: 0.25px;
+    color: $black;
+}
+
+.error-msg {
+    height: 230px;
+	color: $error-main;
+}
+
+.error-page-close {
+    float: right;
+}

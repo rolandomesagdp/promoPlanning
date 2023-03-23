@@ -1,0 +1,14 @@
+<div class="left-pannel-container" [ngClass]="getBackgroundClass()">
+    <div class="promotion-summary">
+        <div class="promotion-summary-header">Current promotion</div>
+        <div class="promotion-summary-container">
+            <pp-promotion-summary
+                [promotion]="promotionSummary"
+                [showViewPromotionLink]="false"
+                [showActionsButton]="false">
+            </pp-promotion-summary>
+        </div>
+    </div>
+    <pp-promotion-simulator [promotion]="promotionSummary" (simulationAccepted)="loadPromotionSummary()"></pp-promotion-simulator>
+</div>
+    

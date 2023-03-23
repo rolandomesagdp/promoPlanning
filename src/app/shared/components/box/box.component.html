@@ -1,0 +1,22 @@
+<mat-card [class]="boxContainerClasses">
+    <div class="box-content">
+        <div class="box-text-container">
+            <div class="box-title text-ellipsis" 
+            [matTooltip]="boxModel.boxTitleTooltip" 
+            matTooltipPosition="below" 
+            matTooltipClass="pp-tooltip">{{boxModel.boxTitle}}</div>
+
+            <div class="box-subtitle text-ellipsis" 
+            [matTooltip]="boxModel.boxSubtitleTooltip" 
+            matTooltipPosition="below"
+            matTooltipClass="pp-tooltip">{{boxModel.boxSubTitle}}</div>
+        </div>
+        <div [class]="boxIconContainerClasses">
+            <mat-icon [class]="boxIconClasses" 
+            aria-hidden="false" 
+            [matTooltip]="boxModel.boxIconTooltip" 
+            matTooltipPosition="below"
+            matTooltipClass="pp-tooltip">{{boxModel.boxIcon}}</mat-icon>
+        </div>
+    </div>
+</mat-card>

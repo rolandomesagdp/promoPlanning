@@ -1,0 +1,25 @@
+.promotion-cards {
+    min-height: 68vh;
+    width: 97%;
+    margin-left: 3%;
+
+    &-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        
+        .promotion-card {
+            width: 271px;
+            height: 480px;
+            margin-top: 1.5%;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+    }
+
+    &-paginator {
+        margin-top: 1%;
+        margin-right: 2%; 
+        margin-bottom: 1%;  
+    }
+}

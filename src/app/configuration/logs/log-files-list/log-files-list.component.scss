@@ -1,0 +1,45 @@
+@import "../../../../themes/pp-colors-palette.scss";
+@import "../../../../themes/pp-variables-base.scss";
+
+.log-files-card {
+    min-height: $content-card-min-height;
+    max-height: $content-card-max-height;
+    overflow-y: hidden;
+
+    .log-files-table {
+        width: 100%;
+        max-height: 70vh;
+        overflow-y: auto;
+        border: 1px solid $gray-200;
+    
+        &-header {
+            color: $black;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 133%;
+        }
+    
+        &-cell {
+            text-align: center;
+        }
+    
+        &-cell-content {
+            color: $black;
+            font-family: Open Sans;
+            font-family: Open Sans;
+            font-size: 14px;
+            line-height: 142%;
+            letter-spacing: 0.25px;
+        }
+    
+        &-icon {
+            font-size: 20px;
+        }
+
+        &-action-icon {
+            color: $gray-600;
+        }
+    }
+}

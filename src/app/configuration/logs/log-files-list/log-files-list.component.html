@@ -1,0 +1,60 @@
+<pp-page-header [title]="title"></pp-page-header>
+
+<pp-error-message *ngIf="errorMessage; else logFilesBlock" [errorMessage]="errorMessage"></pp-error-message>
+
+<ng-template #logFilesBlock>
+    <div class="content-block">
+        <div class="log-files-card" *ngIf="viewModel$ | async as viewModel">
+
+                <mat-table [dataSource]="viewModel.logFiles" class="log-files-table mat-elevation-z0" matSort>
+                    <ng-container matColumnDef="fileName">
+                        <mat-header-cell class="log-files-table-header" *matHeaderCellDef>File name</mat-header-cell>
+                        <mat-cell class="log-files-table-cell-content" *matCellDef="let file"> {{file.fileName}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="extension">
+                        <mat-header-cell class="log-files-table-cell log-files-table-header" *matHeaderCellDef>File extension</mat-header-cell>
+                        <mat-cell class="log-files-table-cell log-files-table-cell-content" *matCellDef="let file"> {{file.extension}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="size">
+                        <mat-header-cell class="log-files-table-cell log-files-table-header" *matHeaderCellDef>File size (kb)</mat-header-cell>
+                        <mat-cell class="log-files-table-cell log-files-table-cell-content" *matCellDef="let file"> {{file.sizeKb}} </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="creationDate">
+                        <mat-header-cell class="log-files-table-cell log-files-table-header" *matHeaderCellDef>Created on</mat-header-cell>
+                        <mat-cell class="log-files-table-cell log-files-table-cell-content" *matCellDef="let file"> {{file.dateCreation | date:'dd/MM/yyyy'}}
+                        </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="lastModified">
+                        <mat-header-cell class="log-files-table-cell log-files-table-header" *matHeaderCellDef>Last modified</mat-header-cell>
+                        <mat-cell class="log-files-table-cell log-files-table-cell-content" *matCellDef="let file">{{file.dateModified | date:'dd/MM/yyyy'}}
+                        </mat-cell>
+                    </ng-container>
+
+                    <ng-container matColumnDef="action">
+                        <mat-header-cell class="log-files-table-cell log-files-table-header" *matHeaderCellDef>Actions</mat-header-cell>
+                        <mat-cell class="log-files-table-cell log-files-table-cell-actions" *matCellDef="let file">
+                            <a matTooltip="Download" matTooltipPosition="below" matTooltipClass="pp-tooltip" 
+                                href="{{file.href}}" download="{{file.fileName}}">
+                                <mat-icon class="log-files-table-icon log-files-table-action-icon">download</mat-icon>
+                            </a>
+                        </mat-cell>
+                    </ng-container>
+
+                    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" class="custom-row"></mat-row>
+                </mat-table>
+
+                <mat-paginator class="mat-elevation-z0" [length]="viewModel.logFilesCount"
+                    [pageIndex]="pageIndex" [pageSize]="pageSize"
+                    [pageSizeOptions]="pageSizeOptions" [showFirstLastButtons]="true"
+                    (page)="onPageChanged($event)">
+                </mat-paginator>
+
+            <pp-spinner *ngIf="loading"></pp-spinner>
+        </div>
+    </div>
+</ng-template>

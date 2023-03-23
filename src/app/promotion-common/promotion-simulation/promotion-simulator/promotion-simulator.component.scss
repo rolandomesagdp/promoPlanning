@@ -1,0 +1,116 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.promotion-simulation {
+    min-height: 475px;
+    margin-left: 2%;
+    margin-bottom: 2%;
+
+    &-header {
+        color: $primary-800;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        height: 38px;
+        margin-left: 10px;
+        padding-top: 3%;
+    }
+
+    &-card {
+        width: 271px;
+        height: 176px;
+        margin-top: 2%;
+        margin-left: 2%;
+        background-color: $primary-50;
+        padding-top: 16px;
+        padding-left: 4px;
+        padding-right: 4px;
+        border-radius: 8px;
+    
+        &-header {
+            margin: 0 0;
+            &-title {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                color: $primary-700;
+            }
+        }
+
+        &-content {
+            padding-left: 10px;
+            &-text {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: $primary-600;
+            }
+        }
+
+        &-actions {
+            .simulate-button {
+                width: 131px;
+                height: 36px;
+
+                &.mat-raised-button.mat-button-disabled {
+                    background-color: $primary-200;
+                }
+            }
+
+            &.mat-card-actions {
+                padding-left: 18px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+            }
+        }
+    }
+
+    &-summary {
+        margin-top: 2%;
+        margin-left: 2%;
+        width: 271px;
+        height: 406px;
+
+        &-action {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 4%;
+        
+            &-button {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                border-radius: 8px;
+                height: 38px;
+                
+                &.mat-raised-button.mat-button-disabled {
+                    background-color: $gray-25;
+                }
+            }
+    
+            &-apply {
+                color: $gray-700;
+                background-color: $white;
+                border: 1px solid $gray-300;
+                width: 150px;
+            }
+    
+            &-reject {
+                color: $white;
+                background-color: $primary-600;
+                width: 70px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+
+::ng-deep .simulation-button-spinner .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: $white;
+}

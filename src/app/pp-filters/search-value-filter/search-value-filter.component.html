@@ -1,0 +1,14 @@
+<form>
+    <mat-form-field class="search-field">
+        <mat-label>Search by promotion name</mat-label>
+        <input matInput type="text" [formControl]="searchValueControl">
+        <button class="search-field-clear-button" 
+            matSuffix 
+            mat-icon-button
+            aria-label="Clear"
+            *ngIf="hasValue()"
+            (click)="clearValue()">
+            <mat-icon class="search-field-clear-button-icon">close</mat-icon>
+        </button>
+    </mat-form-field>
+</form>

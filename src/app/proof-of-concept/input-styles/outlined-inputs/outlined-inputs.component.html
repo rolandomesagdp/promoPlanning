@@ -1,0 +1,63 @@
+<form class="form" [formGroup]="personForm" (submit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-row-element-group">
+            <mat-label class="form-row-element-group-label">Name</mat-label>
+            <mat-form-field>
+                <input matInput type="text" class="form-row-element-group-input" formControlName="name">
+                <mat-hint align="start" class="form-row-element-group-input-hint">Set your name.</mat-hint>
+                <mat-error class="form-row-element-group-input-error">Here is an error</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row-element-group">
+            <mat-label class="form-row-element-group-label">Last name</mat-label>
+            <mat-form-field>
+                <input matInput type="text" class="form-row-element-group-input" formControlName="lastName">
+                <mat-hint align="start" class="form-row-element-group-input-hint">Set your last name</mat-hint>
+                <mat-error class="form-row-element-group-input-error">Here is an error</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row-element-group">
+            <mat-label class="form-row-element-group-label">Date of birth</mat-label>
+            <pp-date-picker formControlName="birthDate"></pp-date-picker>
+        </div>
+
+        <div class="form-row-element-group">
+            <mat-label class="form-row-element-group-label">Email address</mat-label>
+            <mat-form-field>
+                <input matInput type="email" class="form-row-element-group-input" formControlName="emailAddress">
+                <mat-icon class="form-row-element-group-input-icon" matSuffix>mail</mat-icon>
+                <mat-hint align="start" class="form-row-element-group-input-hint">Eail address</mat-hint>
+                <mat-error class="form-row-element-group-input-error">Here is an error</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row-element-group">
+            <mat-label class="form-row-element-group-label">Credit card</mat-label>
+            <mat-form-field>
+                <input matInput type="text" class="form-row-element-group-input" formControlName="credictCardNumber">
+                <mat-icon class="form-row-element-group-input-icon" matPrefix>payment</mat-icon>
+                <mat-hint align="start" class="form-row-element-group-input-hint">Credit card number</mat-hint>
+                <mat-error class="form-row-element-group-input-error">Here is an error</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row-element-group">
+            <mat-label class="form-row-element-group-label">Postal code</mat-label>
+            <mat-form-field>
+                <mat-select class="form-row-element-group-input" formControlName="postalCode">
+                    <mat-option *ngFor="let postalCode of availablePostalCodes" [value]="postalCode">
+                    {{postalCode}}
+                    </mat-option>
+                </mat-select>
+                <mat-hint align="start" class="form-row-element-group-input-hint">Postal code</mat-hint>
+                <mat-error class="form-row-element-group-input-error">Here is an error</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-row-element-group">
+            <button class="form-row-element-group-submit-button" mat-raised-button color="primary">Save</button>
+        </div>
+    </div>
+</form>

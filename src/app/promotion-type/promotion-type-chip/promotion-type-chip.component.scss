@@ -1,0 +1,19 @@
+@import '../../../themes/pp-colors-palette.scss';
+
+.promotion-type-chip {
+    background-color: $blue-50;
+    color: $blue-700;
+
+    &.mat-chip.mat-standard-chip::after {
+        background: none;
+    }
+    
+    &-text {
+        text-align: center;
+        min-width: 40px;
+        max-width: 130px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

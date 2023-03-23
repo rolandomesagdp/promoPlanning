@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 105.0.0.0 (Windows 10)" package="" timestamp="2022-09-19T11:38:07" id="0" hostname="DESKTOP-7C6B9CN" tests="404" errors="0" failures="0" time="4.42">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"/>
+  </properties>
+  <testcase name="PromotionStatusChipComponent provided component input should be set to none if no input is provided" time="0.11" classname="PromotionStatusChipComponent provided component input"/>
+  <testcase name="PromotionStatusChipComponent provided component input should be set to promotionStatusValue if promotion status value is provided as input" time="0.007" classname="PromotionStatusChipComponent provided component input"/>
+  <testcase name="PromotionStatusChipComponent provided component input should be set to promotionStatusId if promotion status id is provided as input" time="0.005" classname="PromotionStatusChipComponent provided component input"/>
+  <testcase name="PromotionStatusChipComponent provided component input should be set to promotionStatus if promotion status object is provided as input" time="0.006" classname="PromotionStatusChipComponent provided component input"/>
+  <testcase name="PromotionStatusChipComponent should create" time="0.006" classname="PromotionStatusChipComponent"/>
+  <testcase name="PromotionStatusChipComponent status chip properties (text, color and tooltip) should display 'No status' with error background color and informative tooltip on invalid status id input" time="0.006" classname="PromotionStatusChipComponent status chip properties (text, color and tooltip)"/>
+  <testcase name="PromotionStatusChipComponent status chip properties (text, color and tooltip) should be correctly set based on PromotionStatus input" time="0.006" classname="PromotionStatusChipComponent status chip properties (text, color and tooltip)"/>
+  <testcase name="PromotionStatusChipComponent status chip properties (text, color and tooltip) should be correctly set based on Promotion status value input" time="0.005" classname="PromotionStatusChipComponent status chip properties (text, color and tooltip)"/>
+  <testcase name="PromotionStatusChipComponent status chip properties (text, color and tooltip) should display 'No status' with error background color and informative tooltip on no input provided" time="0.006" classname="PromotionStatusChipComponent status chip properties (text, color and tooltip)"/>
+  <testcase name="PromotionStatusChipComponent status chip properties (text, color and tooltip) should be correctly set based on Promotion status id input" time="0.006" classname="PromotionStatusChipComponent status chip properties (text, color and tooltip)"/>
+  <testcase name="PromotionStatusChipComponent status chip properties (text, color and tooltip) should display 'No status' with error background color and informative tooltip on invalid status value input" time="0.005" classname="PromotionStatusChipComponent status chip properties (text, color and tooltip)"/>
+  <testcase name="PromotionStatusChipComponent should set chipText, color and tooltip on init" time="0.005" classname="PromotionStatusChipComponent"/>
+  <testcase name="PromotionNavigation navigate should call the router.navigate function with the correct params" time="0.056" classname="PromotionNavigation navigate"/>
+  <testcase name="PromotionNavigation createPromoNavigation should build the correct Promotion Navigation" time="0.039" classname="PromotionNavigation createPromoNavigation"/>
+  <testcase name="PromotionNavigation createPromoNavigation should throw an error if it is not a Promotion Navigation" time="0.015" classname="PromotionNavigation createPromoNavigation"/>
+  <testcase name="PromotionNavigation filtersAuthor should return correct Promotion navigation's filter author" time="0.014" classname="PromotionNavigation filtersAuthor"/>
+  <testcase name="ParamsToFiltersStrategy should correctly read multi-select filters from query param (using Campaigns as example)" time="0" classname="ParamsToFiltersStrategy"/>
+  <testcase name="ParamsToFiltersStrategy should correctly read Promo start and end dates filters from query params" time="0.001" classname="ParamsToFiltersStrategy"/>
+  <testcase name="ParamsToFiltersStrategy should correctly read Promo duration filter from query params" time="0" classname="ParamsToFiltersStrategy"/>
+  <testcase name="PromotionDetailsLeftPannelComponent UI elements promotion summary should re-render if the promotion id changes" time="0.021" classname="PromotionDetailsLeftPannelComponent UI elements promotion summary"/>
+  <testcase name="PromotionDetailsLeftPannelComponent UI elements promotion summary should be printed if a promotion id is provided" time="0.015" classname="PromotionDetailsLeftPannelComponent UI elements promotion summary"/>
+  <testcase name="PromotionDetailsLeftPannelComponent UI elements promotion simulator should reload the summary on simulation accepted" time="0.03" classname="PromotionDetailsLeftPannelComponent UI elements promotion simulator"/>
+  <testcase name="PromotionDetailsLeftPannelComponent UI elements promotion simulator should print on first load" time="0.012" classname="PromotionDetailsLeftPannelComponent UI elements promotion simulator"/>
+  <testcase name="PromotionDetailsLeftPannelComponent should create" time="0.008" classname="PromotionDetailsLeftPannelComponent"/>
+  <testcase name="PromotionFormBase should create" time="0.002" classname="PromotionFormBase"/>
+  <testcase name="PromotionFormBase initialize should set up the correct active item" time="0.001" classname="PromotionFormBase initialize"/>
+  <testcase name="PromotionFormBase initialize should close the left navigation bar" time="0.002" classname="PromotionFormBase initialize"/>
+  <testcase name="PromotionFormBase initialize should set up the correct promotion id from url" time="0.001" classname="PromotionFormBase initialize"/>
+  <testcase name="PromotionFormBase on form close should navigate to the promotion list with current filters" time="0.001" classname="PromotionFormBase on form close"/>
+  <testcase name="PromotionFormBase navigation should navigate to the correct promotion form page" time="0.001" classname="PromotionFormBase navigation"/>
+  <testcase name="SimulationComponent simulation allowed run success path accept simulation should end the simulation process on click" time="0.02" classname="SimulationComponent simulation allowed run success path accept simulation"/>
+  <testcase name="SimulationComponent simulation allowed run success path accept simulation should save the simulation result on click" time="0.02" classname="SimulationComponent simulation allowed run success path accept simulation"/>
+  <testcase name="SimulationComponent simulation allowed run success path reject simulation should end the simulation process on click" time="0.044" classname="SimulationComponent simulation allowed run success path reject simulation"/>
+  <testcase name="SimulationComponent simulation allowed run success path should display a promotion summary at the end of a successfull simulation" time="0.038" classname="SimulationComponent simulation allowed run success path"/>
+  <testcase name="SimulationComponent simulation allowed run success path should display accept and reject buttons after simulation" time="0.027" classname="SimulationComponent simulation allowed run success path"/>
+  <testcase name="SimulationComponent simulation allowed run success path should show the promotion summary with the uplift percent returned by the simulation" time="0.015" classname="SimulationComponent simulation allowed run success path"/>
+  <testcase name="SimulationComponent simulation allowed should print simulation card on first load" time="0.008" classname="SimulationComponent simulation allowed"/>
+  <testcase name="SimulationComponent simulation allowed button should trigger the simulation process on clicked" time="0.02" classname="SimulationComponent simulation allowed button"/>
+  <testcase name="SimulationComponent simulation allowed button should be provided" time="0.007" classname="SimulationComponent simulation allowed button"/>
+  <testcase name="SimulationComponent simulation allowed button should be disabled if simulation is running" time="0.007" classname="SimulationComponent simulation allowed button"/>
+  <testcase name="SimulationComponent simulation not allowed should not provide action buttons: no action is allowed" time="0.005" classname="SimulationComponent simulation not allowed"/>
+  <testcase name="SimulationComponent simulation not allowed should print a 'not allowed' simulation card" time="0.005" classname="SimulationComponent simulation not allowed"/>
+  <testcase name="SimulationComponent should create" time="0.005" classname="SimulationComponent"/>
+  <testcase name="PromotionDetailsFormComponent should create" time="0.011" classname="PromotionDetailsFormComponent"/>
+  <testcase name="ToggleDrawerService toggleDrawerEvent$ should emit a value if toggleDrawer() function is called" time="0.001" classname="ToggleDrawerService toggleDrawerEvent$"/>
+  <testcase name="EnvironmentGuard should be created" time="0.001" classname="EnvironmentGuard"/>
+  <testcase name="EnvironmentGuard navigation activation should activate the route load in non Production environment" time="0.001" classname="EnvironmentGuard navigation activation"/>
+  <testcase name="EnvironmentGuard navigation activation should deactivate the route load in Production environment" time="0.002" classname="EnvironmentGuard navigation activation"/>
+  <testcase name="EnvironmentGuard navigation activation should redirect to base url in Production environment" time="0.001" classname="EnvironmentGuard navigation activation"/>
+  <testcase name="PromotionFormNavigation create should thorw an error if the provided PpNavigation is not of type PromoitonFormNavigation" time="0.001" classname="PromotionFormNavigation create"/>
+  <testcase name="PromotionFormNavigation create should correctly create a PpNavigation of type PromoitonFormNavigation" time="0" classname="PromotionFormNavigation create"/>
+  <testcase name="PromotionFormNavigation navigate should navigate to the correct url" time="0.001" classname="PromotionFormNavigation navigate"/>
+  <testcase name="PromotionFormNavigation navigate should correctly set up the navigation url" time="0" classname="PromotionFormNavigation navigate"/>
+  <testcase name="MainLayoutComponent should create" time="0.003" classname="MainLayoutComponent"/>
+  <testcase name="MainLayoutComponent getDrawerContentClasses Should return collapsed content classes if the menu is expanded" time="0.003" classname="MainLayoutComponent getDrawerContentClasses"/>
+  <testcase name="MainLayoutComponent getDrawerContentClasses Should return expanded content menu classes if the menu is collapsed" time="0.003" classname="MainLayoutComponent getDrawerContentClasses"/>
+  <testcase name="MainLayoutComponent getSideNavClasses Should return expanded sidenav menu classes if the menu is expanded" time="0.003" classname="MainLayoutComponent getSideNavClasses"/>
+  <testcase name="MainLayoutComponent getSideNavClasses Should return collapsed sidenav menu classes if the menu is collapsed" time="0.002" classname="MainLayoutComponent getSideNavClasses"/>
+  <testcase name="CheckBoxFilterListComponent should create" time="0.024" classname="CheckBoxFilterListComponent"/>
+  <testcase name="CheckBoxFilterListComponent filter item selection should clear all items if user clicks clear all" time="0.02" classname="CheckBoxFilterListComponent filter item selection"/>
+  <testcase name="CheckBoxFilterListComponent filter item selection should set the default selection in the selection control" time="0.022" classname="CheckBoxFilterListComponent filter item selection"/>
+  <testcase name="CheckBoxFilterListComponent filter item selection should select all items if user clicks select all" time="0.018" classname="CheckBoxFilterListComponent filter item selection"/>
+  <testcase name="CheckBoxFilterListComponent selection notification should notify if all elements are selected with select all option" time="0.019" classname="CheckBoxFilterListComponent selection notification"/>
+  <testcase name="CheckBoxFilterListComponent selection notification should notify if an element is selected" time="0.016" classname="CheckBoxFilterListComponent selection notification"/>
+  <testcase name="CheckBoxFilterListComponent selection notification should notify if all elements are cleared with clear all option" time="0.021" classname="CheckBoxFilterListComponent selection notification"/>
+  <testcase name="PromotionImportListComponent component elements should have title 'Promotions Import'" time="0.017" classname="PromotionImportListComponent component elements"/>
+  <testcase name="PromotionImportListComponent component elements should print expected columns for table" time="0.008" classname="PromotionImportListComponent component elements"/>
+  <testcase name="PromotionImportListComponent onDestroy should unsubscribe subscription manager" time="0.008" classname="PromotionImportListComponent onDestroy"/>
+  <testcase name="PromotionImportListComponent showDetails should open a dialog to show import table data" time="0.009" classname="PromotionImportListComponent showDetails"/>
+  <testcase name="PromotionImportListComponent import should import external promos for selected table" time="0.01" classname="PromotionImportListComponent import"/>
+  <testcase name="PromotionImportListComponent importAllExternalPromos should import all the external promos to DB" time="0.019" classname="PromotionImportListComponent importAllExternalPromos"/>
+  <testcase name="PromotionImportListComponent edit should open a dialog to edit import table data" time="0.012" classname="PromotionImportListComponent edit"/>
+  <testcase name="PromotionImportListComponent should create" time="0.011" classname="PromotionImportListComponent"/>
+  <testcase name="MasterDataImportEditComponent saveSQLDefinition() should save sql defination" time="0.009" classname="MasterDataImportEditComponent saveSQLDefinition()"/>
+  <testcase name="MasterDataImportEditComponent ngOnDestroy() should unsubscribe subscription manager" time="0.004" classname="MasterDataImportEditComponent ngOnDestroy()"/>
+  <testcase name="MasterDataImportEditComponent ngOnInit should populate form" time="0.004" classname="MasterDataImportEditComponent ngOnInit"/>
+  <testcase name="MasterDataImportEditComponent should create" time="0.004" classname="MasterDataImportEditComponent"/>
+  <testcase name="LocalStorageService addUserPrincipal() should add CurrentPrincipal to localStorage when called" time="0.001" classname="LocalStorageService addUserPrincipal()"/>
+  <testcase name="LocalStorageService getUser() should return a correct PpUser instance if CurrentPrincipal exists in localStorage" time="0.001" classname="LocalStorageService getUser()"/>
+  <testcase name="LocalStorageService getUser() should clear CurrentPrincipal from localStorage has incorrect format." time="0" classname="LocalStorageService getUser()"/>
+  <testcase name="LocalStorageService getUser() should return null if no CurrentPrincipal exists in localStorage" time="0.001" classname="LocalStorageService getUser()"/>
+  <testcase name="LocalStorageService getUser() should return null if CurrentPrincipal has incorrect format in localStorage" time="0" classname="LocalStorageService getUser()"/>
+  <testcase name="LocalStorageService getSettings() Should return the correct ConfigSettings instance when called" time="0" classname="LocalStorageService getSettings()"/>
+  <testcase name="LocalStorageService getSettings() should delete incorrect formatted settings if exists" time="0" classname="LocalStorageService getSettings()"/>
+  <testcase name="LocalStorageService getSettings() should return null if settings has incorrect format in localStorage" time="0.001" classname="LocalStorageService getSettings()"/>
+  <testcase name="LocalStorageService getSettings() should return null if no settings are stored in localStorage" time="0" classname="LocalStorageService getSettings()"/>
+  <testcase name="LocalStorageService addSettings() Should add ConfigSettings to localStorage if addSettings() is called" time="0" classname="LocalStorageService addSettings()"/>
+  <testcase name="LocalStorageService clear() should delete correct item" time="0" classname="LocalStorageService clear()"/>
+  <testcase name="LocalStorageService clearStorage() should clear all local storage" time="0" classname="LocalStorageService clearStorage()"/>
+  <testcase name="NumberRangeFilterComponent Default values should have 20 and 60 as default values if no default values are provided" time="0.006" classname="NumberRangeFilterComponent Default values"/>
+  <testcase name="NumberRangeFilterComponent Default values should set the default values provided by parent component" time="0.005" classname="NumberRangeFilterComponent Default values"/>
+  <testcase name="NumberRangeFilterComponent Value selection should mark the component as touched when user changes the selection" time="0.005" classname="NumberRangeFilterComponent Value selection"/>
+  <testcase name="NumberRangeFilterComponent Value selection should notify the correct value when user changes the selection" time="0.005" classname="NumberRangeFilterComponent Value selection"/>
+  <testcase name="NumberRangeFilterComponent should create" time="0.005" classname="NumberRangeFilterComponent"/>
+  <testcase name="SearchValueFilterComponent should subscribe to control value change on init" time="0.006" classname="SearchValueFilterComponent"/>
+  <testcase name="SearchValueFilterComponent should create" time="0.003" classname="SearchValueFilterComponent"/>
+  <testcase name="SearchValueFilterComponent Value selection should clear the selected value if the user clicks the clear button" time="0.004" classname="SearchValueFilterComponent Value selection"/>
+  <testcase name="SearchValueFilterComponent Value selection should clear the selected value if the user clicks the clear button" time="0.004" classname="SearchValueFilterComponent Value selection"/>
+  <testcase name="SearchValueFilterComponent Value selection should correctly set up the default selection" time="0.004" classname="SearchValueFilterComponent Value selection"/>
+  <testcase name="SearchValueFilterComponent Value selection should mark component as touched when user selects a value" time="0.004" classname="SearchValueFilterComponent Value selection"/>
+  <testcase name="SearchValueFilterComponent Value selection should notify when user changes the selected value" time="0.004" classname="SearchValueFilterComponent Value selection"/>
+  <testcase name="MasterDataImportListComponent edit() should open dialog box for edit" time="0.008" classname="MasterDataImportListComponent edit()"/>
+  <testcase name="MasterDataImportListComponent ngOnInit should call getMasterDataConfig" time="0.003" classname="MasterDataImportListComponent ngOnInit"/>
+  <testcase name="MasterDataImportListComponent import() should import table" time="0.003" classname="MasterDataImportListComponent import()"/>
+  <testcase name="MasterDataImportListComponent should create" time="0.002" classname="MasterDataImportListComponent"/>
+  <testcase name="MasterDataImportListComponent component elements should have values in masterDataImportConfig" time="0.002" classname="MasterDataImportListComponent component elements"/>
+  <testcase name="MasterDataImportListComponent component elements should print expected columns for table" time="0.004" classname="MasterDataImportListComponent component elements"/>
+  <testcase name="MasterDataImportListComponent component elements should have title 'Master Data'" time="0.002" classname="MasterDataImportListComponent component elements"/>
+  <testcase name="MasterDataImportListComponent ngOnDestroy() should unsubscribe subscription manager" time="0.003" classname="MasterDataImportListComponent ngOnDestroy()"/>
+  <testcase name="HeaderComponent togggleMenu should notify when toggle menu buttom is clicked" time="0.003" classname="HeaderComponent togggleMenu"/>
+  <testcase name="HeaderComponent should create" time="0.003" classname="HeaderComponent"/>
+  <testcase name="PromotionFitersComponent Apply filters button should store applied filters as default filters" time="0.006" classname="PromotionFitersComponent Apply filters button"/>
+  <testcase name="PromotionFitersComponent Apply filters button should apply the filters on click" time="0.006" classname="PromotionFitersComponent Apply filters button"/>
+  <testcase name="PromotionFitersComponent Clear filters button should apply the filters after on click" time="0.005" classname="PromotionFitersComponent Clear filters button"/>
+  <testcase name="PromotionFitersComponent Clear filters button should clear the stored default filters" time="0.004" classname="PromotionFitersComponent Clear filters button"/>
+  <testcase name="PromotionFitersComponent Clear filters button should correctly clear the filters on click" time="0.005" classname="PromotionFitersComponent Clear filters button"/>
+  <testcase name="PromotionFitersComponent should create" time="0.004" classname="PromotionFitersComponent"/>
+  <testcase name="PromotionFitersComponent onDestroy should clean the filters manager." time="0.005" classname="PromotionFitersComponent onDestroy"/>
+  <testcase name="PromotionExport generateCSVContent should convert export promotion data to csv" time="0" classname="PromotionExport generateCSVContent"/>
+  <testcase name="PromotionExport generateCSVContent should show an error when there is no promotion data" time="0.001" classname="PromotionExport generateCSVContent"/>
+  <testcase name="PromotionExport setExportPromotionData should set up the information provided by the server" time="0" classname="PromotionExport setExportPromotionData"/>
+  <testcase name="PromotionExport setExportPromotionData should throw an error if there is no information returned from server" time="0.001" classname="PromotionExport setExportPromotionData"/>
+  <testcase name="PromotionExport should be created" time="0" classname="PromotionExport"/>
+  <testcase name="PromotionExport getExportPromotionData should get export promotion data from the server" time="0.001" classname="PromotionExport getExportPromotionData"/>
+  <testcase name="PromotionExport downloadCSVFile should show an error when there is no csv data to download" time="0" classname="PromotionExport downloadCSVFile"/>
+  <testcase name="PromotionTypeChipComponent should create" time="0.003" classname="PromotionTypeChipComponent"/>
+  <testcase name="PromotionTypeChipComponent chip text and tooltip should be correctly set up based on provided PromotionType" time="0.002" classname="PromotionTypeChipComponent chip text and tooltip"/>
+  <testcase name="PromotionTypeChipComponent chip text and tooltip should be correctly set up based on provided PromotionType name" time="0.001" classname="PromotionTypeChipComponent chip text and tooltip"/>
+  <testcase name="PromotionTypeChipComponent chip text and tooltip should be correctly set up based on provided PromotionType id" time="0.002" classname="PromotionTypeChipComponent chip text and tooltip"/>
+  <testcase name="PromotionTypeChipComponent chip text and tooltip should display 'No Promotion Type available' message when no input is provided" time="0.002" classname="PromotionTypeChipComponent chip text and tooltip"/>
+  <testcase name="PromotionTypeChipComponent chip text and tooltip should display 'No Promotion Type available' message when an invalid promotionTypeId is provided" time="0.001" classname="PromotionTypeChipComponent chip text and tooltip"/>
+  <testcase name="PromotionTypeChipComponent providedInputType should recognize promo type id input when provided" time="0.002" classname="PromotionTypeChipComponent providedInputType"/>
+  <testcase name="PromotionTypeChipComponent providedInputType should recognize promo type name input when provided" time="0.002" classname="PromotionTypeChipComponent providedInputType"/>
+  <testcase name="PromotionTypeChipComponent providedInputType should recognize promo type input when provided" time="0.002" classname="PromotionTypeChipComponent providedInputType"/>
+  <testcase name="PromotionTypeChipComponent providedInputType should recognize when no input is provided" time="0.002" classname="PromotionTypeChipComponent providedInputType"/>
+  <testcase name="PromotionTypeChipComponent on init should set the chip text and tooltip" time="0.002" classname="PromotionTypeChipComponent on init"/>
+  <testcase name="PromotionListComponent should create" time="0.023" classname="PromotionListComponent"/>
+  <testcase name="PromotionListComponent table Columns should be fetch on ngOnInit" time="0.01" classname="PromotionListComponent table Columns"/>
+  <testcase name="PromotionListComponent table Columns should display correct column header" time="0.013" classname="PromotionListComponent table Columns"/>
+  <testcase name="PromotionListComponent navigation and filters should navigate to the correct url on page change" time="0.013" classname="PromotionListComponent navigation and filters"/>
+  <testcase name="PromotionListComponent navigation and filters should navigate to correct url when filters are applied" time="0.013" classname="PromotionListComponent navigation and filters"/>
+  <testcase name="PromotionListComponent onInit should subscribe to route params change" time="0.008" classname="PromotionListComponent onInit"/>
+  <testcase name="PromotionListComponent onInit should connect to Promotion Lock Notification Hub" time="0.006" classname="PromotionListComponent onInit"/>
+  <testcase name="PromotionListComponent onDestroy should destroy promotion list manager and promotion table column manager" time="0.005" classname="PromotionListComponent onDestroy"/>
+  <testcase name="FiltersToParams should build correct params for Promo Duration" time="0.001" classname="FiltersToParams"/>
+  <testcase name="FiltersToParams should build correct params based on provided date range" time="0" classname="FiltersToParams"/>
+  <testcase name="FiltersToParams should contain correct select item params (Promotion Status)" time="0.001" classname="FiltersToParams"/>
+  <testcase name="FiltersToParams should contain correct select item params (Campaigns)" time="0" classname="FiltersToParams"/>
+  <testcase name="FiltersToParams should be undefined if no values are provided" time="0" classname="FiltersToParams"/>
+  <testcase name="PpNavigation Model create should create a valid instance of PpNavigation model if valid values are provided" time="0" classname="PpNavigation Model create"/>
+  <testcase name="PpNavigation Model create should throw an error if invalid values are provided." time="0.001" classname="PpNavigation Model create"/>
+  <testcase name="PpNavigation Model isPromotionNavigation should return false if it is not a Promotion navigation" time="0" classname="PpNavigation Model isPromotionNavigation"/>
+  <testcase name="PpNavigation Model isPromotionNavigation should return true if it is a Promotion navigation" time="0.001" classname="PpNavigation Model isPromotionNavigation"/>
+  <testcase name="PpNavigation Model navigate should do nothing if the Navigation model does not have a routerLink" time="0.001" classname="PpNavigation Model navigate"/>
+  <testcase name="PpNavigation Model navigate should do nothing if the Navigation model is a Promotion Navigation" time="0.001" classname="PpNavigation Model navigate"/>
+  <testcase name="PpNavigation Model navigate should navigate if the Navigation model is not a Promotion Navigation" time="0.002" classname="PpNavigation Model navigate"/>
+  <testcase name="PromotionImportEditComponent importTable should call importExternalPromos and import the selected table" time="0.017" classname="PromotionImportEditComponent importTable"/>
+  <testcase name="PromotionImportEditComponent saveImportData should call saveImportTypeConfiguration and save the import data" time="0.013" classname="PromotionImportEditComponent saveImportData"/>
+  <testcase name="PromotionImportEditComponent saveImportData should close dialog after updating the import data" time="0.012" classname="PromotionImportEditComponent saveImportData"/>
+  <testcase name="PromotionImportEditComponent closeDialog should close the dialog" time="0.014" classname="PromotionImportEditComponent closeDialog"/>
+  <testcase name="PromotionImportEditComponent onDestroy should unsubscribe subscription manager" time="0.013" classname="PromotionImportEditComponent onDestroy"/>
+  <testcase name="PromotionImportEditComponent should create" time="0.012" classname="PromotionImportEditComponent"/>
+  <testcase name="PromotionImportEditComponent onInit should call getTableImportTypeConfiguration function to get the import type config data" time="0.014" classname="PromotionImportEditComponent onInit"/>
+  <testcase name="PromotionImportEditComponent onInit should build the promotion import form" time="0.013" classname="PromotionImportEditComponent onInit"/>
+  <testcase name="PromotionImportEditComponent onInit should initialize checkboxOptions" time="0.013" classname="PromotionImportEditComponent onInit"/>
+  <testcase name="PromotionImportEditComponent createCheckboxOptions should assign default values to checkboxOptions to show in checkboxes" time="0.012" classname="PromotionImportEditComponent createCheckboxOptions"/>
+  <testcase name="PromotionImportEditComponent getTableImportTypeConfiguration should define importTableTypeConfig for selected importTable" time="0.014" classname="PromotionImportEditComponent getTableImportTypeConfiguration"/>
+  <testcase name="SidenavTreeMenuComponent should create" time="0.003" classname="SidenavTreeMenuComponent"/>
+  <testcase name="SidenavTreeMenuComponent onMenuItemClick should toggle expand side navigation menu if the menu is collapsed" time="0.002" classname="SidenavTreeMenuComponent onMenuItemClick"/>
+  <testcase name="SidenavTreeMenuComponent onMenuItemClick on expanded side nav should navigate to the correct path if clicked item has one" time="0.002" classname="SidenavTreeMenuComponent onMenuItemClick on expanded side nav"/>
+  <testcase name="SidenavTreeMenuComponent onMenuItemClick on expanded side nav should update the expanded items list" time="0.002" classname="SidenavTreeMenuComponent onMenuItemClick on expanded side nav"/>
+  <testcase name="SidenavTreeMenuComponent onMenuItemClick on expanded side nav should open submenu if clicked item has childs" time="0.001" classname="SidenavTreeMenuComponent onMenuItemClick on expanded side nav"/>
+  <testcase name="PromotionDetailsWrapperComponent should create" time="0.004" classname="PromotionDetailsWrapperComponent"/>
+  <testcase name="PromotionPermissionsManager promotion export should return true if user has export permissions" time="0.003" classname="PromotionPermissionsManager promotion export"/>
+  <testcase name="PromotionPermissionsManager promotion export should return false if user does not have export permissions" time="0.002" classname="PromotionPermissionsManager promotion export"/>
+  <testcase name="PromotionPermissionsManager promotion unlock should return false if user does not have unlock permissions" time="0.001" classname="PromotionPermissionsManager promotion unlock"/>
+  <testcase name="PromotionPermissionsManager promotion unlock should return true if user has unlock permissions" time="0.001" classname="PromotionPermissionsManager promotion unlock"/>
+  <testcase name="PromotionPermissionsManager promotion delete should return true if user has delete permissions" time="0.001" classname="PromotionPermissionsManager promotion delete"/>
+  <testcase name="PromotionPermissionsManager promotion delete should return false if user does not have delete permissions" time="0.001" classname="PromotionPermissionsManager promotion delete"/>
+  <testcase name="PromotionPermissionsManager promotion uplift write should return true if user has uplift write permissions" time="0.001" classname="PromotionPermissionsManager promotion uplift write"/>
+  <testcase name="PromotionPermissionsManager promotion uplift write should return false if user does not have uplift write permissions" time="0.001" classname="PromotionPermissionsManager promotion uplift write"/>
+  <testcase name="PromotionPermissionsManager simulation should return false if user does not have simulation permissions" time="0.001" classname="PromotionPermissionsManager simulation"/>
+  <testcase name="PromotionPermissionsManager simulation should return false if the promotion is in the past" time="0.001" classname="PromotionPermissionsManager simulation"/>
+  <testcase name="PromotionPermissionsManager simulation should return false if the promotion has no type" time="0.001" classname="PromotionPermissionsManager simulation"/>
+  <testcase name="PromotionPermissionsManager simulation should return true if user has simulation permissions, user is planner, the promotion has a type and promotion is in the future" time="0.002" classname="PromotionPermissionsManager simulation"/>
+  <testcase name="PromotionPermissionsManager simulation should return false if user is not planner" time="0.002" classname="PromotionPermissionsManager simulation"/>
+  <testcase name="PromotionPermissionsManager promotion roi read should return false if user does not have read roi permissions" time="0.001" classname="PromotionPermissionsManager promotion roi read"/>
+  <testcase name="PromotionPermissionsManager promotion roi read should return true if user has roi read permissions" time="0.001" classname="PromotionPermissionsManager promotion roi read"/>
+  <testcase name="PromotionPermissionsManager promotion write should return true if user has write permissions" time="0.001" classname="PromotionPermissionsManager promotion write"/>
+  <testcase name="PromotionPermissionsManager promotion write should return false if user does not have write permissions" time="0.001" classname="PromotionPermissionsManager promotion write"/>
+  <testcase name="PromotionPermissionsManager promotion copy should return true if user has copy permissions" time="0.001" classname="PromotionPermissionsManager promotion copy"/>
+  <testcase name="PromotionPermissionsManager promotion copy should return false if user does not have read permissions" time="0.001" classname="PromotionPermissionsManager promotion copy"/>
+  <testcase name="PromotionPermissionsManager promotion read should return false if user does not have read permissions" time="0.001" classname="PromotionPermissionsManager promotion read"/>
+  <testcase name="PromotionPermissionsManager promotion read should return true if user has read permissions" time="0.001" classname="PromotionPermissionsManager promotion read"/>
+  <testcase name="PromotionPermissionsManager should create" time="0.001" classname="PromotionPermissionsManager"/>
+  <testcase name="PromotionPermissionsManager admin user permission should return true if user is admin" time="0.002" classname="PromotionPermissionsManager admin user permission"/>
+  <testcase name="PromotionPermissionsManager admin user permission should return false if user is not admin" time="0.001" classname="PromotionPermissionsManager admin user permission"/>
+  <testcase name="PromotionFormHeaderComponent ui elements should not display the 'more actions' button if no promotion is provided" time="0.004" classname="PromotionFormHeaderComponent ui elements"/>
+  <testcase name="PromotionFormHeaderComponent ui elements should not display the 'more actions' button if is disabled" time="0.003" classname="PromotionFormHeaderComponent ui elements"/>
+  <testcase name="PromotionFormHeaderComponent ui elements should display the save button as disabled if input value is true" time="0.003" classname="PromotionFormHeaderComponent ui elements"/>
+  <testcase name="PromotionFormHeaderComponent ui elements should not display the save button if input value is false" time="0.003" classname="PromotionFormHeaderComponent ui elements"/>
+  <testcase name="PromotionFormHeaderComponent ui elements should display the save button as enabled if input value is false" time="0.004" classname="PromotionFormHeaderComponent ui elements"/>
+  <testcase name="PromotionFormHeaderComponent ui elements should display the 'more actions' button if is enabled and a promotion is provided" time="0.003" classname="PromotionFormHeaderComponent ui elements"/>
+  <testcase name="PromotionFormHeaderComponent ui elements should display the save button if input value is true" time="0.002" classname="PromotionFormHeaderComponent ui elements"/>
+  <testcase name="PromotionFormHeaderComponent should create" time="0.004" classname="PromotionFormHeaderComponent"/>
+  <testcase name="PromotionFormHeaderComponent actions should notify when nav item is clicked" time="0.004" classname="PromotionFormHeaderComponent actions"/>
+  <testcase name="PromotionFormHeaderComponent actions should notify when close button is clicked" time="0.003" classname="PromotionFormHeaderComponent actions"/>
+  <testcase name="PromotionFormHeaderComponent actions should notify when save button is clicked" time="0.003" classname="PromotionFormHeaderComponent actions"/>
+  <testcase name="PromotionFormHeaderComponent navigation items roi nav item should not be printed if is disabled" time="0.002" classname="PromotionFormHeaderComponent navigation items roi nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items roi nav item should be printed if is required, if roi setting is enabled and user has roi permissions" time="0.003" classname="PromotionFormHeaderComponent navigation items roi nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items roi nav item should not be printed if ROI setting is disabled" time="0.002" classname="PromotionFormHeaderComponent navigation items roi nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items roi nav item should not be printed if the user doesn't have ROI read permissions" time="0.002" classname="PromotionFormHeaderComponent navigation items roi nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items should be set up on init" time="0.003" classname="PromotionFormHeaderComponent navigation items"/>
+  <testcase name="PromotionFormHeaderComponent navigation items participant nav item should not be printed if is disabled" time="0.003" classname="PromotionFormHeaderComponent navigation items participant nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items participant nav item should be printed if is enabled" time="0.003" classname="PromotionFormHeaderComponent navigation items participant nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items participant attributes nav item should not be printed if is disabled" time="0.002" classname="PromotionFormHeaderComponent navigation items participant attributes nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items participant attributes nav item should be printed if is enabled" time="0.005" classname="PromotionFormHeaderComponent navigation items participant attributes nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items promotion edit nav item should be printed if is enabled" time="0.002" classname="PromotionFormHeaderComponent navigation items promotion edit nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items promotion edit nav item should not be printed if is disabled" time="0.002" classname="PromotionFormHeaderComponent navigation items promotion edit nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items promotion details nav item should not be printed if is disabled" time="0.003" classname="PromotionFormHeaderComponent navigation items promotion details nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items promotion details nav item should be printed if is enabled" time="0.003" classname="PromotionFormHeaderComponent navigation items promotion details nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items forecast edit nav item should not be printed if is disabled" time="0.004" classname="PromotionFormHeaderComponent navigation items forecast edit nav item"/>
+  <testcase name="PromotionFormHeaderComponent navigation items forecast edit nav item should be printed if is enabled" time="0.002" classname="PromotionFormHeaderComponent navigation items forecast edit nav item"/>
+  <testcase name="PromoitonListManager loadPromotions should load promotions and total count on first load." time="0.004" classname="PromoitonListManager loadPromotions"/>
+  <testcase name="PromoitonListManager loadPromotions should correctly set up the promotionsCount variable." time="0.004" classname="PromoitonListManager loadPromotions"/>
+  <testcase name="PromoitonListManager loadPromotions should not load promotions total count on page change." time="0.003" classname="PromoitonListManager loadPromotions"/>
+  <testcase name="PromoitonListManager loadPromotions should correctly set up the promotions variable." time="0.003" classname="PromoitonListManager loadPromotions"/>
+  <testcase name="PromoitonListManager promotionLock should correctly unlock a promotion." time="0.003" classname="PromoitonListManager promotionLock"/>
+  <testcase name="PromoitonListManager promotionLock should correctly lock a promotion." time="0.004" classname="PromoitonListManager promotionLock"/>
+  <testcase name="PromoitonListManager promotionLock should correctly force a promotion unlock ." time="0.003" classname="PromoitonListManager promotionLock"/>
+  <testcase name="FiltersToHttpParams should contain correct dates provided in date range filter" time="0" classname="FiltersToHttpParams"/>
+  <testcase name="FiltersToHttpParams should contain correct ids provided in multi-select filters (using Campaigns as example)" time="0" classname="FiltersToHttpParams"/>
+  <testcase name="FiltersToHttpParams should contain correct ids provided in multi-select filters (using Promotion Status as example)" time="0" classname="FiltersToHttpParams"/>
+  <testcase name="FiltersToHttpParams should contain promo duration start and end if are provided" time="0" classname="FiltersToHttpParams"/>
+  <testcase name="FiltersToHttpParams should be undefined if no filters are provided" time="0" classname="FiltersToHttpParams"/>
+  <testcase name="PromotionSummaryComponent should create" time="0.004" classname="PromotionSummaryComponent"/>
+  <testcase name="PromotionNavigationComponent should notify when the action button is clicked" time="0.003" classname="PromotionNavigationComponent"/>
+  <testcase name="PromotionNavigationComponent should create" time="0.002" classname="PromotionNavigationComponent"/>
+  <testcase name="PromotionNavigationComponent navigation should display the correct navigation items" time="0.002" classname="PromotionNavigationComponent navigation"/>
+  <testcase name="PromotionNavigationComponent navigation should navigate when a navigation item is clicked" time="0.002" classname="PromotionNavigationComponent navigation"/>
+  <testcase name="DropDownTreeSelectComponent should create" time="0.003" classname="DropDownTreeSelectComponent"/>
+  <testcase name="DropDownTreeSelectComponent Parent node levels should notify parent component when parent node is expanded" time="0.003" classname="DropDownTreeSelectComponent Parent node levels"/>
+  <testcase name="DropDownTreeSelectComponent Parent node levels should have at least one hidden child after passed as input parameter" time="0.002" classname="DropDownTreeSelectComponent Parent node levels"/>
+  <testcase name="DropDownTreeSelectComponent should set up default selected element's name value if provided" time="0.002" classname="DropDownTreeSelectComponent"/>
+  <testcase name="DropDownTreeSelectComponent Last child level should set the level as selected value if is the last level" time="0.003" classname="DropDownTreeSelectComponent Last child level"/>
+  <testcase name="DropDownTreeSelectComponent Last child level should not set the level as selected value if it is not the last level" time="0.003" classname="DropDownTreeSelectComponent Last child level"/>
+  <testcase name="DropDownTreeSelectComponent Last child level should notiy the form is touched if the item is selected" time="0.003" classname="DropDownTreeSelectComponent Last child level"/>
+  <testcase name="DropDownTreeSelectComponent Last child level should notiy if the item is selected" time="0.002" classname="DropDownTreeSelectComponent Last child level"/>
+  <testcase name="ReportPageComponent should create" time="0.017" classname="ReportPageComponent"/>
+  <testcase name="ReportPageComponent getChartContainerClass() should return 'full-width-chart-container' if is full screen chart" time="0.008" classname="ReportPageComponent getChartContainerClass()"/>
+  <testcase name="ReportPageComponent getChartContainerClass() should return 'half-width-chart-container' if is half screen chart" time="0.009" classname="ReportPageComponent getChartContainerClass()"/>
+  <testcase name="ForecastDemandImportListComponent component elements should print expected columns for table" time="0.007" classname="ForecastDemandImportListComponent component elements"/>
+  <testcase name="ForecastDemandImportListComponent component elements should have values in ForecastDemand" time="0.003" classname="ForecastDemandImportListComponent component elements"/>
+  <testcase name="ForecastDemandImportListComponent component elements should have title 'Forecast and Demand'" time="0.002" classname="ForecastDemandImportListComponent component elements"/>
+  <testcase name="ForecastDemandImportListComponent onDestroy should unsubscribe subscription manager" time="0.003" classname="ForecastDemandImportListComponent onDestroy"/>
+  <testcase name="ForecastDemandImportListComponent should create" time="0.003" classname="ForecastDemandImportListComponent"/>
+  <testcase name="ForecastDemandImportListComponent import should be called import Forecast from service" time="0.003" classname="ForecastDemandImportListComponent import"/>
+  <testcase name="ForecastDemandImportListComponent onInit should call getTableValues() on init" time="0.002" classname="ForecastDemandImportListComponent onInit"/>
+  <testcase name="SidenavComponent should create" time="0.002" classname="SidenavComponent"/>
+  <testcase name="DateRageFilterComponent should create" time="0.017" classname="DateRageFilterComponent"/>
+  <testcase name="DateRageFilterComponent Date range form should notify form have been touched if user updates end date" time="0.052" classname="DateRageFilterComponent Date range form"/>
+  <testcase name="DateRageFilterComponent Date range form should notify when user updates start date" time="0.049" classname="DateRageFilterComponent Date range form"/>
+  <testcase name="DateRageFilterComponent Date range form should notify form have been touched if user updates start date" time="0.053" classname="DateRageFilterComponent Date range form"/>
+  <testcase name="DateRageFilterComponent Date range form should update start and end date form controls if values are set up from outside" time="0.057" classname="DateRageFilterComponent Date range form"/>
+  <testcase name="DateRageFilterComponent Date range form should notify when user updates end date" time="0.055" classname="DateRageFilterComponent Date range form"/>
+  <testcase name="CampaignsListComponent should create" time="0.01" classname="CampaignsListComponent"/>
+  <testcase name="FiltersManager clearAllFilters() should make applyFiltersEvent$ to emit a cleared filters object" time="0.001" classname="FiltersManager clearAllFilters()"/>
+  <testcase name="FiltersManager applyFilters() should make applyFiltersEvent$ to emit the filters value" time="0.001" classname="FiltersManager applyFilters()"/>
+  <testcase name="PageHeaderComponent should print the title with correct color" time="0.005" classname="PageHeaderComponent"/>
+  <testcase name="PageHeaderComponent should create" time="0.007" classname="PageHeaderComponent"/>
+  <testcase name="SidenavMenuService itemIsActive Should return false if no item is active" time="0.001" classname="SidenavMenuService itemIsActive"/>
+  <testcase name="SidenavMenuService itemIsActive Should return true if the item is active" time="0.001" classname="SidenavMenuService itemIsActive"/>
+  <testcase name="SidenavMenuService itemIsActive Should return false if a different item is active" time="0.001" classname="SidenavMenuService itemIsActive"/>
+  <testcase name="SidenavMenuService toggleExpandSideNavMenu Should expand the menu if it is collapsed" time="0.001" classname="SidenavMenuService toggleExpandSideNavMenu"/>
+  <testcase name="SidenavMenuService toggleExpandSideNavMenu Should collapse the menu if it is expanded" time="0.001" classname="SidenavMenuService toggleExpandSideNavMenu"/>
+  <testcase name="SidenavMenuService setCurrentActiveMenuItemOrDefault should set Home as default active item when the provided route does not exists" time="0.001" classname="SidenavMenuService setCurrentActiveMenuItemOrDefault"/>
+  <testcase name="SidenavMenuService setCurrentActiveMenuItemOrDefault should set the correct active item when the provided route is a child of the item router link" time="0.001" classname="SidenavMenuService setCurrentActiveMenuItemOrDefault"/>
+  <testcase name="SidenavMenuService setCurrentActiveMenuItemOrDefault should set Home as default active item when no route is provided" time="0.001" classname="SidenavMenuService setCurrentActiveMenuItemOrDefault"/>
+  <testcase name="SidenavMenuService setCurrentActiveMenuItemOrDefault should set the correct active item when url has query string" time="0.001" classname="SidenavMenuService setCurrentActiveMenuItemOrDefault"/>
+  <testcase name="LockManager onLockMessageReceived should unlock a promotion on promotion UnLock message received" time="0.007" classname="LockManager onLockMessageReceived"/>
+  <testcase name="LockManager onLockMessageReceived should lock a promotion on promotion Lock message received" time="0.005" classname="LockManager onLockMessageReceived"/>
+  <testcase name="LockManager onLockMessageReceived should  correctly react to a promotion Unlock request by another user" time="0.004" classname="LockManager onLockMessageReceived"/>
+  <testcase name="LockManager onLockMessageReceived should  force a promotion unlock a promotion on ForceUnLock message received" time="0.006" classname="LockManager onLockMessageReceived"/>
+  <testcase name="LockManager should create" time="0.004" classname="LockManager"/>
+  <testcase name="UpliftChipComponent should create" time="0.009" classname="UpliftChipComponent"/>
+  <testcase name="UpliftChipComponent chip background color should be red if the perfent is negative" time="0.006" classname="UpliftChipComponent chip background color"/>
+  <testcase name="UpliftChipComponent chip background color should be green if the perfent is positive" time="0.006" classname="UpliftChipComponent chip background color"/>
+  <testcase name="UpliftChipComponent printed icon should be an up arrow if the uplift is positive" time="0.007" classname="UpliftChipComponent printed icon"/>
+  <testcase name="UpliftChipComponent printed icon should be a down arrow if the uplift is negative" time="0.005" classname="UpliftChipComponent printed icon"/>
+  <testcase name="UpliftChipComponent printed uplift should print the correct uplift percent with the % as prefix" time="0.004" classname="UpliftChipComponent printed uplift"/>
+  <testcase name="LoginFormComponent Login Form should display user id and password input errors if values are not provided" time="0.043" classname="LoginFormComponent Login Form"/>
+  <testcase name="LoginFormComponent Login Form should contain values provided by user in FormGroup" time="0.02" classname="LoginFormComponent Login Form"/>
+  <testcase name="LoginFormComponent Spinner should hide after loading process ends" time="0.03" classname="LoginFormComponent Spinner"/>
+  <testcase name="LoginFormComponent Spinner should be displayed if information is loading" time="0.018" classname="LoginFormComponent Spinner"/>
+  <testcase name="LoginFormComponent Spinner should be hidden by default" time="0.013" classname="LoginFormComponent Spinner"/>
+  <testcase name="LoginFormComponent onSubmit should stop the loading spinner if login fails" time="0.017" classname="LoginFormComponent onSubmit"/>
+  <testcase name="LoginFormComponent onSubmit should call snackbar.openError() with corresponding error message if login fails" time="0.018" classname="LoginFormComponent onSubmit"/>
+  <testcase name="LoginFormComponent onSubmit should stop the loading spinner if login succeed" time="0.016" classname="LoginFormComponent onSubmit"/>
+  <testcase name="LoginFormComponent onSubmit should navigate to correct path if login succeed" time="0.018" classname="LoginFormComponent onSubmit"/>
+  <testcase name="LoginFormComponent onSubmit should call Authentication Service login() with user input values." time="0.017" classname="LoginFormComponent onSubmit"/>
+  <testcase name="LoginFormComponent Submit button should not call onSubmit() function on click if form values are not provided" time="0.015" classname="LoginFormComponent Submit button"/>
+  <testcase name="LoginFormComponent Submit button should call onSubmit() function on click if values are provided in login form" time="0.019" classname="LoginFormComponent Submit button"/>
+  <testcase name="LoginFormComponent Submit button should be disabled if password is not provided in login form" time="0.014" classname="LoginFormComponent Submit button"/>
+  <testcase name="LoginFormComponent Submit button should be disabled if userID is not provided." time="0.014" classname="LoginFormComponent Submit button"/>
+  <testcase name="LoginFormComponent Submit button should be enabled if form is valid." time="0.017" classname="LoginFormComponent Submit button"/>
+  <testcase name="LoginFormComponent inputHasError() userID input should be false if userID is populated" time="0.015" classname="LoginFormComponent inputHasError() userID input"/>
+  <testcase name="LoginFormComponent inputHasError() userID input should be true if userID is not populated" time="0.014" classname="LoginFormComponent inputHasError() userID input"/>
+  <testcase name="LoginFormComponent inputHasError() password input should be false if password is populated" time="0.015" classname="LoginFormComponent inputHasError() password input"/>
+  <testcase name="LoginFormComponent inputHasError() password input should be true if password is not populated" time="0.013" classname="LoginFormComponent inputHasError() password input"/>
+  <testcase name="CalendarComponent should create" time="0.012" classname="CalendarComponent"/>
+  <testcase name="CalendarComponent should subscribe to angular's router queryParam onInit" time="0.005" classname="CalendarComponent"/>
+  <testcase name="CalendarComponent should get column configuration" time="0.006" classname="CalendarComponent"/>
+  <testcase name="CalendarComponent onDestroy should destroy the Promotion lock connection hub" time="0.004" classname="CalendarComponent onDestroy"/>
+  <testcase name="CalendarComponent On task Selected should navigate to the corresponding promotion if Promo task is selected" time="0.005" classname="CalendarComponent On task Selected"/>
+  <testcase name="CalendarComponent On task Selected should do nothing if selected promotion is locked" time="0.004" classname="CalendarComponent On task Selected"/>
+  <testcase name="CalendarComponent On task Selected should do nothing if Promo Type task is selected" time="0.005" classname="CalendarComponent On task Selected"/>
+  <testcase name="CalendarComponent should correctly apply filters" time="0.005" classname="CalendarComponent"/>
+  <testcase name="ReportPageListComponent should create" time="0.011" classname="ReportPageListComponent"/>
+  <testcase name="ReportPageListComponent navigateToReportsPage() should navigate to the correct internal report page" time="0.006" classname="ReportPageListComponent navigateToReportsPage()"/>
+  <testcase name="ReportPageListComponent navigateToReportsPage() should navigat to the correct external report page" time="0.007" classname="ReportPageListComponent navigateToReportsPage()"/>
+  <testcase name="ReportPageListComponent Titles should print the correct subtitle" time="0.005" classname="ReportPageListComponent Titles"/>
+  <testcase name="ReportPageListComponent Titles should print the correct title" time="0.007" classname="ReportPageListComponent Titles"/>
+  <testcase name="ReportPageListComponent Report pages print should print correct amount of report pages" time="0.012" classname="ReportPageListComponent Report pages print"/>
+  <testcase name="ReportPageListComponent buildBoxModel() should build correct BoxModel from an internal ReportPage" time="0.006" classname="ReportPageListComponent buildBoxModel()"/>
+  <testcase name="ReportPageListComponent buildBoxModel() should build correct BoxModel from an external ReportPage" time="0.006" classname="ReportPageListComponent buildBoxModel()"/>
+  <testcase name="UnitOfMeasurementSelectorComponent should create" time="0.016" classname="UnitOfMeasurementSelectorComponent"/>
+  <testcase name="UnitOfMeasurementSelectorComponent Unit of measurement select should correctly change the selection on user interaction" time="0.033" classname="UnitOfMeasurementSelectorComponent Unit of measurement select"/>
+  <testcase name="UnitOfMeasurementSelectorComponent Unit of measurement select should print the correct options" time="0.028" classname="UnitOfMeasurementSelectorComponent Unit of measurement select"/>
+  <testcase name="UnitOfMeasurementSelectorComponent Unit of measurement select should print default selection on load" time="0.016" classname="UnitOfMeasurementSelectorComponent Unit of measurement select"/>
+  <testcase name="UnitOfMeasurementSelectorComponent Unit of measurement select should be printed on the screen" time="0.013" classname="UnitOfMeasurementSelectorComponent Unit of measurement select"/>
+  <testcase name="PromotionImportDetailsComponent buildAttributesCampaignDescriptionAndFormat should define the description and the format labels for table AttributesCampaign" time="0.008" classname="PromotionImportDetailsComponent buildAttributesCampaignDescriptionAndFormat"/>
+  <testcase name="PromotionImportDetailsComponent buildAttributesParticipantDescriptionAndFormat should define the description and the format labels for table AttributesParticipant" time="0.006" classname="PromotionImportDetailsComponent buildAttributesParticipantDescriptionAndFormat"/>
+  <testcase name="PromotionImportDetailsComponent buildPromotionsDescriptionAndFormat should define the description and the format labels for table Promotions" time="0.007" classname="PromotionImportDetailsComponent buildPromotionsDescriptionAndFormat"/>
+  <testcase name="PromotionImportDetailsComponent closeDialog should close the dialog" time="0.007" classname="PromotionImportDetailsComponent closeDialog"/>
+  <testcase name="PromotionImportDetailsComponent should create" time="0.007" classname="PromotionImportDetailsComponent"/>
+  <testcase name="PromotionImportDetailsComponent buildPromoParticipantsDescriptionAndFormat should define the description and the format labels for table PromoParticipants" time="0.007" classname="PromotionImportDetailsComponent buildPromoParticipantsDescriptionAndFormat"/>
+  <testcase name="PromotionImportDetailsComponent onInit should call buildDescriptionAndFormat function" time="0.007" classname="PromotionImportDetailsComponent onInit"/>
+  <testcase name="PromotionImportDetailsComponent buildAttributesPromoDescriptionAndFormat should define the description and the format labels for table AttributesPromo" time="0.006" classname="PromotionImportDetailsComponent buildAttributesPromoDescriptionAndFormat"/>
+  <testcase name="PromotionImportDetailsComponent buildCampaignsDescriptionAndFormat should define the description and the format labels for table Campaigns" time="0.008" classname="PromotionImportDetailsComponent buildCampaignsDescriptionAndFormat"/>
+  <testcase name="PromotionImportDetailsComponent buildDescriptionAndFormat should define the description and the format labels to be displayed" time="0.008" classname="PromotionImportDetailsComponent buildDescriptionAndFormat"/>
+  <testcase name="PromotionActionsComponent actions menu should open on click" time="0.028" classname="PromotionActionsComponent actions menu"/>
+  <testcase name="PromotionActionsComponent should create" time="0.016" classname="PromotionActionsComponent"/>
+  <testcase name="PromotionActionsComponent actions menu items add participants should hide if promotion is locked" time="0.023" classname="PromotionActionsComponent actions menu items add participants"/>
+  <testcase name="PromotionActionsComponent actions menu items add participants should hide if user does not have write permissions over promotions" time="0.022" classname="PromotionActionsComponent actions menu items add participants"/>
+  <testcase name="PromotionActionsComponent actions menu items add participants should display if user has write permissions over promotions and promotion is not locked" time="0.054" classname="PromotionActionsComponent actions menu items add participants"/>
+  <testcase name="PromotionActionsComponent actions menu items add participants on click should navigate to add participants form" time="0.034" classname="PromotionActionsComponent actions menu items add participants on click"/>
+  <testcase name="PromotionActionsComponent actions menu items unlock request should show if promotion is locked and user has unlock permissions" time="0.024" classname="PromotionActionsComponent actions menu items unlock request"/>
+  <testcase name="PromotionActionsComponent actions menu items unlock request should hide if user does not have unlock permissions" time="0.023" classname="PromotionActionsComponent actions menu items unlock request"/>
+  <testcase name="PromotionActionsComponent actions menu items unlock request on click should do nothing if the user rejects in the dialog" time="0.028" classname="PromotionActionsComponent actions menu items unlock request on click"/>
+  <testcase name="PromotionActionsComponent actions menu items unlock request on click should open the promotion unlock request confirmation dialog" time="0.029" classname="PromotionActionsComponent actions menu items unlock request on click"/>
+  <testcase name="PromotionActionsComponent actions menu items unlock request on click should request an unlock if user confirms in the dialog" time="0.027" classname="PromotionActionsComponent actions menu items unlock request on click"/>
+  <testcase name="PromotionActionsComponent actions menu items unlock request should hide if promotion is unlock" time="0.022" classname="PromotionActionsComponent actions menu items unlock request"/>
+  <testcase name="PromotionActionsComponent actions menu items forecast item on click should navigate to readonly forecast if promotion is locked" time="0.029" classname="PromotionActionsComponent actions menu items forecast item on click"/>
+  <testcase name="PromotionActionsComponent actions menu items forecast item on click should navigate to readonly forecast if user does not have permission to write forecast" time="0.05" classname="PromotionActionsComponent actions menu items forecast item on click"/>
+  <testcase name="PromotionActionsComponent actions menu items forecast item on click should navigate to forecast edit if promotion is not locked, is not in the past and user has permissions to write uplift" time="0.035" classname="PromotionActionsComponent actions menu items forecast item on click"/>
+  <testcase name="PromotionActionsComponent actions menu items forecast item on click should navigate to readonly forecast if promotion is in the past" time="0.079" classname="PromotionActionsComponent actions menu items forecast item on click"/>
+  <testcase name="PromotionActionsComponent actions menu items forecast item should display if promotion is unlock" time="0.057" classname="PromotionActionsComponent actions menu items forecast item"/>
+  <testcase name="PromotionActionsComponent actions menu items forecast item should display if promotion is locked" time="0.073" classname="PromotionActionsComponent actions menu items forecast item"/>
+  <testcase name="PromotionActionsComponent actions menu items force unlock should show if promotion is locked and user is admin" time="0.083" classname="PromotionActionsComponent actions menu items force unlock"/>
+  <testcase name="PromotionActionsComponent actions menu items force unlock should hide if user is not admin" time="0.075" classname="PromotionActionsComponent actions menu items force unlock"/>
+  <testcase name="PromotionActionsComponent actions menu items force unlock on click should request an unlock if user confirms in the dialog" time="0.047" classname="PromotionActionsComponent actions menu items force unlock on click"/>
+  <testcase name="PromotionActionsComponent actions menu items force unlock on click should do nothing if the user rejects in the dialog" time="0.032" classname="PromotionActionsComponent actions menu items force unlock on click"/>
+  <testcase name="PromotionActionsComponent actions menu items force unlock on click should open the promotion force unlock confirmation dialog" time="0.034" classname="PromotionActionsComponent actions menu items force unlock on click"/>
+  <testcase name="PromotionActionsComponent actions menu items force unlock should hide if promotion is unlock" time="0.023" classname="PromotionActionsComponent actions menu items force unlock"/>
+  <testcase name="PromotionActionsComponent actions menu items participants attributes should display if user has write permissions over promotions and promotion is not locked" time="0.043" classname="PromotionActionsComponent actions menu items participants attributes"/>
+  <testcase name="PromotionActionsComponent actions menu items participants attributes on click should navigate to add participants form" time="0.07" classname="PromotionActionsComponent actions menu items participants attributes on click"/>
+  <testcase name="PromotionActionsComponent actions menu items participants attributes should hide if user does not have write permissions over promotions" time="0.033" classname="PromotionActionsComponent actions menu items participants attributes"/>
+  <testcase name="PromotionActionsComponent actions menu items participants attributes should hide if promotion is locked" time="0.022" classname="PromotionActionsComponent actions menu items participants attributes"/>
+  <testcase name="PromotionActionsComponent actions menu items delete promotion should not display if delete item is disabled" time="0.025" classname="PromotionActionsComponent actions menu items delete promotion"/>
+  <testcase name="PromotionActionsComponent actions menu items delete promotion should not display if promotion is locked" time="0.054" classname="PromotionActionsComponent actions menu items delete promotion"/>
+  <testcase name="PromotionActionsComponent actions menu items delete promotion should not display if user don't have delete permission" time="0.028" classname="PromotionActionsComponent actions menu items delete promotion"/>
+  <testcase name="PromotionActionsComponent actions menu items delete promotion on click should delete the promotion if the user confirms in the confirmation dialog" time="0.076" classname="PromotionActionsComponent actions menu items delete promotion on click"/>
+  <testcase name="PromotionActionsComponent actions menu items delete promotion on click should open a promotion delete confirmation dialog" time="0.076" classname="PromotionActionsComponent actions menu items delete promotion on click"/>
+  <testcase name="PromotionActionsComponent actions menu items delete promotion on click should do nothing if the user rejects in the confirmation dialog" time="0.097" classname="PromotionActionsComponent actions menu items delete promotion on click"/>
+  <testcase name="PromotionActionsComponent actions menu items roi should hide if user does not have roi read permissions" time="0.043" classname="PromotionActionsComponent actions menu items roi"/>
+  <testcase name="PromotionActionsComponent actions menu items roi on click should navigate to roi page" time="0.081" classname="PromotionActionsComponent actions menu items roi on click"/>
+  <testcase name="PromotionActionsComponent actions menu items roi should display if user has roi read permissions" time="0.027" classname="PromotionActionsComponent actions menu items roi"/>
+  <testcase name="PromotionActionsComponent actions menu items export promotion should display" time="0.026" classname="PromotionActionsComponent actions menu items export promotion"/>
+  <testcase name="PromotionActionsComponent actions menu items export promotion on click should trigger a promotion export process." time="0.059" classname="PromotionActionsComponent actions menu items export promotion on click"/>
+  <testcase name="PromotionActionsComponent actions menu items copy promotion on click should navigate to copy promotion form" time="0.031" classname="PromotionActionsComponent actions menu items copy promotion on click"/>
+  <testcase name="PromotionActionsComponent actions menu items copy promotion should display" time="0.023" classname="PromotionActionsComponent actions menu items copy promotion"/>
+  <testcase name="DrawerCardComponent toggleFilterPane() should call toggle() function from Angular Material's MatDrawer" time="0.009" classname="DrawerCardComponent toggleFilterPane()"/>
+  <testcase name="DrawerCardComponent should create" time="0.006" classname="DrawerCardComponent"/>
+  <testcase name="DrawerCardComponent should subscribe to ToggleDrawerService.toggleDrawerEvent$ onInit()" time="0.01" classname="DrawerCardComponent"/>
+  <testcase name="CalendarTaskManager should create" time="0.002" classname="CalendarTaskManager"/>
+  <testcase name="CalendarTaskManager should correctly set tasks property after load" time="0.001" classname="CalendarTaskManager"/>
+  <testcase name="CalendarTaskManager lock process should correctly lock a given task" time="0.006" classname="CalendarTaskManager lock process"/>
+  <testcase name="CalendarTaskManager lock process should not lock a task if it is a PromotType task" time="0.001" classname="CalendarTaskManager lock process"/>
+  <testcase name="CalendarTaskManager lock process should correctly unlock a task" time="0.001" classname="CalendarTaskManager lock process"/>
+  <testcase name="CalendarTaskManager lock process should correctly force an unlock for a given task" time="0.001" classname="CalendarTaskManager lock process"/>
+  <testcase name="BoxComponent should create" time="0.007" classname="BoxComponent"/>
+  <testcase name="BoxComponent UI should print correct subtitle" time="0.007" classname="BoxComponent UI"/>
+  <testcase name="BoxComponent UI should print correct title" time="0.011" classname="BoxComponent UI"/>
+  <testcase name="BoxComponent UI should print correct icon" time="0.007" classname="BoxComponent UI"/>
+  <testcase name="BoxComponent Component initialization should correctly set up pp-blue style" time="0.007" classname="BoxComponent Component initialization"/>
+  <testcase name="BoxComponent Component initialization should correctly set up accent style" time="0.006" classname="BoxComponent Component initialization"/>
+  <testcase name="BoxComponent Component initialization should correctly set up purple style" time="0.007" classname="BoxComponent Component initialization"/>
+  <testcase name="PageHeaderNavigationComponent should create" time="0.004" classname="PageHeaderNavigationComponent"/>
+  <testcase name="PageHeaderNavigationComponent navigation items styles should print inactive item with the correct colors" time="0.004" classname="PageHeaderNavigationComponent navigation items styles"/>
+  <testcase name="PageHeaderNavigationComponent navigation items styles should print active item with the correct colors" time="0.003" classname="PageHeaderNavigationComponent navigation items styles"/>
+  <testcase name="PageHeaderNavigationComponent navigation should do nothing if the active item is clicked" time="0.003" classname="PageHeaderNavigationComponent navigation"/>
+  <testcase name="PageHeaderNavigationComponent navigation should notify when inactive items are clicked" time="0.004" classname="PageHeaderNavigationComponent navigation"/>
+  <testcase name="PageHeaderNavigationComponent isActiveItem should return false if the provided navigation item is not the active one" time="0.003" classname="PageHeaderNavigationComponent isActiveItem"/>
+  <testcase name="PageHeaderNavigationComponent isActiveItem should return true if the provided navigation item is active" time="0.005" classname="PageHeaderNavigationComponent isActiveItem"/>
+  <system-out>
+    <![CDATA[Chrome 105.0.0.0 (Windows 10) WARN: 'W0004 - Timeout for theme loading is over: any. See:
+http://js.devexpress.com/error/21_1/W0004'
+,Chrome 105.0.0.0 (Windows 10) ERROR
+  Disconnected , because no message in 30000 ms.
+,Chrome 105.0.0.0 (Windows 10) ERROR
+  Disconnected Client disconnected from CONNECTED state (transport close)
+,Chrome 105.0.0.0 (Windows 10) WARN: 'You are running production build of Inferno in development mode. Use dev:module entry point.'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

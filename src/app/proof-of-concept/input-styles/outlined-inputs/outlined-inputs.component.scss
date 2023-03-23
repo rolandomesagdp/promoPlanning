@@ -1,0 +1,64 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+
+    &-element-group {
+        display: grid;
+        font-size: 10px;
+        font-family: Open Sans;
+        width: 17%;
+        margin-right: 2%;
+
+        &-submit-button {
+            height: 52%;
+            width: 40%;
+            margin-top: 10%;
+        }
+    
+        &-input {
+            font-size: 15px;
+            margin-bottom: 1%;
+            margin-left: 2%;
+    
+            &-icon {
+                font-size: 22px;
+                color: $gray-500;
+            }
+    
+            &-hint {
+                font-family: Open Sans;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.25px;
+                color: $gray-500;
+            }
+
+            &-error {
+                font-family: Open Sans;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.25px;
+            }
+
+            &-sufix {
+                font-family: Open sans;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+    
+        &-label {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: $gray-700;
+        }
+    }
+}

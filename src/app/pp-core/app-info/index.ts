@@ -1,0 +1,1 @@
+export { AppInfoService } from './app-info.service';

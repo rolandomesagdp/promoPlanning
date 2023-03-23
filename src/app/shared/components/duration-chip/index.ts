@@ -1,0 +1,1 @@
+export * from "./duration-chip.component"

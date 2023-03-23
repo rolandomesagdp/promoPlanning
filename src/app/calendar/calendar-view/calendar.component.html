@@ -1,0 +1,71 @@
+<ng-container *ngIf="!tasksManager.errorMessage; else errorMessageTemplate">
+	<pp-page-container>
+		<pp-promotion-navigation 
+		[activeNavigation]="calendarNavigation"
+		subtitle="Keep track of your promotions"
+		itensTracking="{{getPromotionsCount()}} active promotions"
+		actionButtonTitle="Add new promotion"
+        (actionButtonClicked)="createNewPromotion()">
+	</pp-promotion-navigation>
+	
+	<div class="calendar-container" *ngIf="!tasksManager.loadingTasks; else spinnerTemplate">
+		<dx-gantt taskListWidth="520" scaleType="months" height="655"
+			[taskTooltipContentTemplate]="'taskTooltipContentTemplate'"
+			(onContentReady)="onCalendarReady($event.component)"
+			(onTaskEditDialogShowing)="disableDialog($event)" (onTaskDblClick)="taskSelected($event.data)">
+
+			<dxi-strip-line [start]="currentTime" title="Today" cssClass="current-time">
+			</dxi-strip-line>
+
+			<dxo-tasks [dataSource]="tasksManager.tasks" colorExpr="color" titleExpr="name"
+				startExpr="startDate" endExpr="endDate" progressExpr="currentStatus"></dxo-tasks>
+
+			<dxi-column *ngFor="let col of dynamicColumns"
+				[dataField]="col.property"
+				[dataType]="col.dataType"
+				[format]="[col.format]"
+				[caption]="col.columnHeader"
+				[cellTemplate]="col.cellTemplate"
+				[alignment]="col.alignment"></dxi-column>
+
+			<!-- <dxi-column dataField="name" dataType="string" caption="Name" alignment="left"></dxi-column>
+			<dxi-column dataField="numberOfPromos" caption="Count" dataType="number" alignment="right">
+			</dxi-column>
+
+			<dxi-column dataField="units" caption="Total forecast" dataType="number" [format]="formatNumber"
+				alignment="right"></dxi-column>
+			<dxi-column dataField="uplift" caption="Uplift (%)" dataType="number" [format]="formatPercentNumber"
+				alignment="right"></dxi-column>
+			<dxi-column dataField="upliftQty" caption="Uplift" dataType="number" [format]="formatNumber"
+				alignment="right"></dxi-column>
+
+			<dxi-column dataField="numberOfParticipants" caption="Participants" dataType="number"
+				format="fixedPoint" alignment="right"></dxi-column>
+
+			<dxi-column dataField="elementId" dataType="string" [visible]="false"></dxi-column>
+			<dxi-column dataField="elementType" dataType="string" [visible]="false"></dxi-column>
+			<dxi-column dataField="isLocked" dataType="string" [visible]="false"></dxi-column> -->
+
+			<div *dxTemplate="let task of 'taskTooltipContentTemplate'" class="custom-task-edit-tooltip">
+				<div class="custom-tooltip-title">{{task.title}}</div>
+				<div class="custom-tooltip-row"><span> Start: </span>{{task.startDate | date: 'yyyy-MM-dd'}}
+				</div>
+				<div class="custom-tooltip-row"><span> End: </span>{{task.endDate | date: 'yyyy-MM-dd'}}</div>
+			</div>
+			<div *dxTemplate="let data of 'custom-uplift'">
+				<pp-uplift-chip [value]="data.value"></pp-uplift-chip>
+			</div>
+			<div *dxTemplate="let data of 'custom-approved-status'">
+				<pp-participants-status *ngIf="showParticipantsStatus(data.data)" [approvedParticipantsStatus]="data.value"></pp-participants-status>
+			</div>
+		</dx-gantt>
+	</div>
+	
+	<ng-template mainpane #spinnerTemplate>
+		<pp-spinner></pp-spinner>
+	</ng-template>
+	</pp-page-container>
+</ng-container>
+<ng-template #errorMessageTemplate>
+	<pp-error-message [errorMessage]="tasksManager.errorMessage"></pp-error-message>
+</ng-template>

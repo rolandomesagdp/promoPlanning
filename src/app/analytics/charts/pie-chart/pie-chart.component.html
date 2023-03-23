@@ -1,0 +1,23 @@
+<dx-pie-chart id="pie"
+				  [palette]="chartPalette"
+				  [type]="chartDataSource.chartType"
+				  [dataSource]="chartDataSource.chartSeries"
+				  (onPointClick)="onPointClick($event)">
+	<dxi-series argumentField="argumentField"
+					valueField="valueField">
+		<dxo-label [visible]="true">
+			<dxo-connector [visible]="true" [width]="1"></dxo-connector>
+		</dxo-label>
+	</dxi-series>
+	<dxo-common-series-settings hoverMode="none" selectionMode="allArgumentPoints">
+		<dxo-label *ngIf="chartDataSource.chartSeries.length <= 10"
+					  [visible]="true"
+					  [format]="lableFormat">
+		</dxo-label>
+	</dxo-common-series-settings>
+	<dxo-title [text]="chartDataSource.chartTitle">
+		<dxo-subtitle [text]="chartDataSource.chartSubTitle"></dxo-subtitle>
+	</dxo-title>
+	<dxo-tooltip [enabled]="true" [customizeTooltip]="customizeTooltip"></dxo-tooltip>
+	<dxo-size [width]="600"></dxo-size>
+</dx-pie-chart>

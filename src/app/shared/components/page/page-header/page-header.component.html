@@ -1,0 +1,18 @@
+<div class="page-header">
+    <div class="page-header-content">
+        <div>
+            <div class="page-header-content-title">
+                <h4 class="page-header-content-title-text" id="title" [ngClass]="getClasses()">{{title}}</h4>
+                <div *ngIf="hint" class="page-header-content-title-hint">{{hint}}</div>
+            </div>
+            <div class="page-header-content-subtitle">{{subtitle}}</div>
+        </div>
+        <div class="page-header-content-actions">
+            <ng-content select="[page-header-actions]"></ng-content>
+        </div>
+    </div>
+</div>
+<mat-divider class="page-header-devider"></mat-divider>
+<div class="page-header-body">
+    <ng-content select="[page-header-body]"></ng-content>
+</div>

@@ -1,0 +1,13 @@
+  <mat-button-toggle-group class="pp-navigation" name="pp-header-navigation" aria-label="Header navigation">
+    <mat-button-toggle *ngFor="let navigationItem of navigationItems; index as index" value="navigationItem"
+        [ngClass]="getNavigationClasses(navigationItem, index)"
+        (click)="onNavigationItemClicked(navigationItem)"
+        [matTooltip]="getTooltip(navigationItem)" 
+        matTooltipPosition="below"
+        matTooltipClass="pp-tooltip">
+        <div class="pp-navigation-item-content">
+            <mat-icon [ngClass]="getIconClass(navigationItem)">{{navigationItem.icon}}</mat-icon>
+            <div class="pp-navigation-item-content-title">{{navigationItem.tooltip}}</div>
+        </div>
+    </mat-button-toggle>
+  </mat-button-toggle-group>

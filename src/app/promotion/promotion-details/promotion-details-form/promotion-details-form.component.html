@@ -1,0 +1,112 @@
+<form class="form" *ngIf="promotionFormService.promotionForm as promotionForm" [formGroup]="promotionForm">
+    <pp-promotion-details-tab-group>
+        <div general-info-tab>
+            <div class="outline-group promotion-form-input-group">
+                <mat-label class="outline-group-label">Name*</mat-label>
+                <mat-form-field>
+                    <input matInput type="text" class="outline-group-input" formControlName="name">
+                    <mat-error class="outline-group-input-error promotion-form-input-group-error">Name is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="outline-group promotion-form-description-input">
+                <mat-label class="outline-group-label">Description</mat-label>
+                <mat-form-field>
+                    <textarea matInput type="text" class="outline-group-input" formControlName="description"></textarea>
+                </mat-form-field>
+            </div>
+
+            <div class="promotion-form-date">
+                <div class="outline-group promotion-form-date-input-group">
+                    <mat-label class="outline-group-label promotion-form-date-input-group-label">
+                        Sell in start
+                    </mat-label>
+                    <div class="promotion-form-date-input-group-picker"><pp-date-picker formControlName="sellInStartDate"></pp-date-picker></div>
+                    <mat-error
+                        *ngIf="!promotionFormService.controlIsValid('sellInStartLessThanSellInEnd', 'sellInStartDate')"
+                        class="outline-group-input-error promotion-form-date-input-group-error"
+                        matTooltipPosition="below" matTooltipClass="pp-tooltip"
+                        [matTooltip]="promotionFormService.getControlValidationError('sellInStartLessThanSellInEnd', 'sellInStartDate')">
+                        Ivalid sell in start date
+                    </mat-error>
+                </div>
+
+                <div class="outline-group promotion-form-date-input-group">
+                    <mat-label class="outline-group-label promotion-form-date-input-group-label">Sell in end</mat-label>
+                    <div class="promotion-form-date-input-group-picker"><pp-date-picker formControlName="sellInEndDate"></pp-date-picker></div>
+                    <mat-error
+                        *ngIf="!promotionFormService.controlIsValid('sellInStartLessThanSellInEnd', 'sellInEndDate')"
+                        class="outline-group-input-error promotion-form-date-input-group-error"
+                        matTooltipPosition="below" matTooltipClass="pp-tooltip"
+                        [matTooltip]="promotionFormService.getControlValidationError('sellInStartLessThanSellInEnd', 'sellInEndDate')">
+                        Invalid sell in end date
+                    </mat-error>
+                </div>
+            </div>
+
+            <div class="promotion-form-date">
+                <div class="outline-group promotion-form-date-input-group">
+                    <mat-label class="outline-group-label promotion-form-date-input-group-label">Sell out start</mat-label>
+                    <div class="promotion-form-date-input-group-picker"><pp-date-picker formControlName="sellOutStartDate"></pp-date-picker></div>
+                    <mat-error
+                        *ngIf="!promotionFormService.controlIsValid('sellOutStartLessThanSellOutEnd', 'sellOutStartDate')"
+                        class="outline-group-input-error promotion-form-date-input-group-error"
+                        matTooltipPosition="below" matTooltipClass="pp-tooltip"
+                        [matTooltip]="promotionFormService.getControlValidationError('sellOutStartLessThanSellOutEnd', 'sellOutStartDate')">
+                        Invalid sell out start date
+                    </mat-error>
+                </div>
+
+                <div class="outline-group promotion-form-date-input-group">
+                    <mat-label class="outline-group-label promotion-form-date-input-group-label">Sell out end</mat-label>
+                    <div class="promotion-form-date-input-group-picker"><pp-date-picker formControlName="sellOutEndDate"></pp-date-picker></div>
+                    <mat-error
+                        *ngIf="!promotionFormService.controlIsValid('sellOutStartLessThanSellOutEnd', 'sellOutEndDate')"
+                        class="outline-group-input-error promotion-form-date-input-group-error"
+                        matTooltipPosition="below" matTooltipClass="pp-tooltip"
+                        [matTooltip]="promotionFormService.getControlValidationError('sellOutStartLessThanSellOutEnd', 'sellOutEndDate')">
+                        Invalid sell out end date
+                    </mat-error>
+                </div>
+            </div>
+
+            <div class="outline-group promotion-form-input-group">
+                <mat-label class="outline-group-label">Campaign</mat-label>
+                <mat-form-field>
+                    <mat-select class="outline-group-input" formControlName="campaignId">
+                        <mat-option *ngFor="let campaign of promotionFormService.availableCampaigns"
+                            [value]="campaign.campaignId">
+                            {{campaign.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="outline-group promotion-form-input-group">
+                <mat-label class="outline-group-label">Promotion type</mat-label>
+                <mat-form-field>
+                    <mat-select class="outline-group-input" formControlName="promoTypeId">
+                        <mat-option *ngFor="let promoType of promotionFormService.availablePromoTypes"
+                            [value]="promoType.promotypeId">
+                            {{promoType.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="outline-group promotion-form-input-group">
+                <mat-label class="outline-group-label">Status</mat-label>
+                <mat-form-field>
+                    <mat-select class="outline-group-input" formControlName="status">
+                        <mat-option *ngFor="let promoStatus of promotionFormService.availableStatus"
+                            [value]="promoStatus.statusId">
+                            {{promoStatus.statusValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div promotion-attributes-tab>Promotion Attributes form</div>
+    </pp-promotion-details-tab-group>
+</form>

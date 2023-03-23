@@ -1,0 +1,1 @@
+export * from './uplift-chip.component';

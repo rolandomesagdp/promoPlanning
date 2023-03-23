@@ -1,0 +1,17 @@
+<mat-toolbar class="pp-tool-bar">
+  <button mat-icon-button class="menu-toggle-button" aria-label="Toggle menu button" (click)="togggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="toolsgroup-logo-img-container">
+    <img class="toolsgroup-logo-img" alt="ToolsGroup" routerLink="" src="assets/images/toolsgroup-logo-promo-planning.svg">
+  </span>
+  <span class="promo-planning-logo-container">
+    <p class="promo-planning-logo">Promo Planning</p>
+  </span>
+  <span class="header-spacer"></span>
+
+
+  <div class="user-menu-container" *ngIf="user$ | async as user">
+    <pp-user-menu [user]="user"></pp-user-menu>
+  </div>
+</mat-toolbar>

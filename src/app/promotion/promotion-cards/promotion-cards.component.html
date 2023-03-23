@@ -1,0 +1,40 @@
+<ng-container *ngIf="!promotionCardsManager.errorMessage; else errorMessageTemplate">
+    <pp-drawer-card>
+        <div mainpane>
+            <pp-promotion-navigation [activeNavigation]="promotionCardsManager.navigationItem"
+                subtitle="Keep track of your promotions"
+                itensTracking="{{promotionCardsManager.promotionsCount}} active promotions"
+                actionButtonTitle="Add new promotion" 
+                (actionButtonClicked)="createNewPromotion()">
+            </pp-promotion-navigation>
+
+            <div class="promotion-cards">
+                <div class="promotion-cards-container" *ngIf="!promotionCardsManager.loadingPromotions; else spinnerTemplate">
+                    <div class="promotion-card" *ngFor="let promotion of promotionCardsManager.promotions">
+                        <pp-promotion-summary [promotion]="promotion" (viewPromotion)="onViewPromotion($event)"></pp-promotion-summary>
+                    </div>
+                </div>
+
+                <ng-template #spinnerTemplate>
+                    <pp-spinner></pp-spinner>
+                </ng-template>
+
+                <mat-paginator *ngIf="promotionCardsManager.promostionsCount > promotionCardsManager.lowerPageSize
+                && !promotionCardsManager.loadingPromotions" class="promotion-cards-paginator mat-elevation-z0"
+                    [length]="promotionCardsManager.promostionsCount" [pageIndex]="promotionCardsManager.pageIndex"
+                    [pageSize]="promotionCardsManager.pageSize"
+                    [pageSizeOptions]="promotionCardsManager.pageSizeOptions" [showFirstLastButtons]="true"
+                    (page)="onPageChange($event)">
+                </mat-paginator>
+            </div>
+        </div>
+
+        <div sidepane>
+            <pp-promotion-details-wrapper [promotionId]="selectedPromotionId"></pp-promotion-details-wrapper>
+        </div>
+    </pp-drawer-card>
+</ng-container>
+
+<ng-template #errorMessageTemplate>
+    <pp-error-message [errorMessage]="promotionCardsManager.errorMessage"></pp-error-message>
+</ng-template>

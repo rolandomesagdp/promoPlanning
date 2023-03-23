@@ -1,0 +1,1 @@
+export { PromotionFitersComponent } from './promotion-fiters.component';

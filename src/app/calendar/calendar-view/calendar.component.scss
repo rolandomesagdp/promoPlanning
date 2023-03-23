@@ -1,0 +1,45 @@
+@import '../../../themes/pp-colors-palette.scss';
+
+.title {
+    color: $primary-dark
+}
+
+.calendar-container {
+    max-height: 70vh;
+}
+
+.custom-task-edit-tooltip {
+    background-color: black;
+}
+
+.custom-tooltip-title {
+    color: white
+}
+
+.custom-tooltip-row {
+    color: white;
+}
+
+::ng-deep .dx-gantt .current-time {
+	border-left: 2px solid red;
+}
+
+::ng-deep .dx-gantt .dx-gantt-status-time {
+	display: none;
+}
+
+::ng-deep .today-button {
+	height: 35px;
+	width: 89px;
+	background: #1991eb;
+	border: 1px solid #1991eb;
+	color: #ffffff;
+}
+
+::ng-deep .today-button:hover {
+    background-color: #1476bf;
+}
+
+::ng-deep .today-button:focus {
+    background: #1991eb;
+}

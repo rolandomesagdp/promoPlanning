@@ -1,0 +1,19 @@
+.filled-date-box {
+    height: 45px;
+}
+
+::ng-deep .filled-date-box .dx-texteditor-input { 
+    border-bottom: 1px solid #7c7b7b;
+} 
+
+::ng-deep .filled-date-box .dx-texteditor-buttons-container {
+    border-bottom: 1px solid #7c7b7b;
+}
+
+::ng-deep .filled-date-box .dx-texteditor-input :hover { 
+    border-bottom: 6px solid #7c7b7b;
+} 
+
+::ng-deep .filled-date-box .dx-texteditor-buttons-container :hover {
+    border-bottom: 6px solid #7c7b7b;
+}

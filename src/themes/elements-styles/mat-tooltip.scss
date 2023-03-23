@@ -1,0 +1,9 @@
+@import '../pp-colors-palette.scss';
+
+.mat-tooltip.pp-tooltip {
+    font-size: 12px;
+    background-color: $gray-900;
+    font-family: Open Sans;
+    line-height: 18px;
+    color: $white;
+}

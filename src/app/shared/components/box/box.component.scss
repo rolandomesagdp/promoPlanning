@@ -1,0 +1,52 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.box-container {
+    width: 255px;
+    height: 84px;
+    border-radius: 2px;
+}
+
+.box-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-text-container {
+    width: 170px;
+}
+
+.text-ellipsis {
+    white-space: nowrap; 
+    width: 170px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box-title {
+    font-size: 19px;
+    font-weight: bold;
+    color: $gray-50;
+    width: 170px;
+}
+
+.box-subtitle {
+    font-size: 17px;
+    margin-top: 3%;
+    font-weight: 400;
+    color: $gray-50;
+    opacity: 0.8;
+    width: 170px;
+}
+
+.box-icon-container {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    margin-top: 2.5%;
+    transform: rotate(-5deg);
+}
+
+.box-icon {
+    font-size: 24px;
+    margin-left: 14%;
+}

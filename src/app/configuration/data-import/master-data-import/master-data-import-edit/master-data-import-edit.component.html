@@ -1,0 +1,26 @@
+<div *ngIf="masterDataImportForm.importMasterDataForm; else errorMessageTemplate">
+
+    <h3 mat-dialog-title class="title">Table: {{ importTableData.tableName }}</h3>
+
+    <div mat-dialog-content>
+        <pp-spinner *ngIf="loading"></pp-spinner>
+        <form [formGroup]="masterDataImportForm.importMasterDataForm" (ngSubmit)="saveSQLDefinition()">
+            <span class="sub-title">Definition (SQL code)</span>
+            <textarea class="text-area" formControlName="importSql"></textarea>
+        </form>
+    </div>
+
+    <div mat-dialog-actions align="end">
+        <button class="button-margin" mat-raised-button mat-dialog-close>Cancel</button>
+        <button mat-raised-button color="primary" (click)="saveSQLDefinition()">Save</button>
+    </div>
+</div>
+<ng-template #errorMessageTemplate>
+    <div class="error-msg">
+        {{errorMessage}}
+    </div>
+    <div mat-dialog-actions align="end">
+        <button mat-raised-button mat-dialog-close>Close</button>
+    </div>
+</ng-template>
+

@@ -1,0 +1,12 @@
+<ng-container *ngIf="unitsOfMeasurementService.availableUnitsOfMeasurement as unitsOfMeasurement">
+    <div class="outline-group">
+        <mat-label class="outline-group-label">Unit of measurement (UoM)</mat-label>
+        <mat-form-field>
+            <mat-select class="outline-group-input" [formControl]="unitOfMeasurement">
+                <mat-option [id]="getTestingId(uom)" *ngFor="let uom of unitsOfMeasurement" [value]='uom.id'>
+                    {{ uom.name }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</ng-container>

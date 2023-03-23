@@ -1,0 +1,64 @@
+<pp-spinner *ngIf="loading"></pp-spinner>
+
+<div *ngIf="!errorMessage && !loading; else errorMessageTemplate">
+    <h3 mat-dialog-title class="dialog-title">{{ importTableTypeConfig.description }}</h3>
+
+    <div mat-dialog-content class="import-edit-content" [formGroup]="promotionImportForm.importTypeForm">
+            <div class="import-detail-line-container">
+                <div class="import-label">Database name:</div>
+                <div class="import-value">{{ importTableTypeConfig.sourceDB }}</div>
+            </div>
+
+            <div class="import-detail-line-container">
+                <div class="import-label">Table name:</div>
+                <div class="import-value">{{ importTableTypeConfig.sourceTable }}</div>
+            </div>
+
+            <div class="import-detail-line-container">
+                
+                <mat-radio-group formControlName="importType">
+                    <mat-radio-button class="import-value" color='primary' *ngFor='let checkbox of checkboxOptions' [value]="checkbox.value">{{ checkbox.title }}</mat-radio-button>
+                </mat-radio-group>
+                <br>
+                <mat-error *ngIf="promotionImportForm.importType.errors?.invalid">Please select atleast one option</mat-error>
+            </div>
+    </div>
+
+    <div mat-dialog-actions align="end">
+        <button mat-raised-button
+                class="action-button"
+                matTooltip="Close" 
+                matTooltipPosition="above"
+                matTooltipClass="pp-tooltip"
+                (click)="closeDialog()">Close</button>
+        <button mat-raised-button
+                class="action-button"
+                color="primary"
+                matTooltip="Import" 
+                matTooltipPosition="above"
+                matTooltipClass="pp-tooltip"
+                [disabled]="promotionImportForm.importType.invalid"
+                (click)="importTable()">Import</button>
+        <button mat-raised-button
+                color="primary"
+                matTooltip="Save" 
+                matTooltipPosition="above"
+                matTooltipClass="pp-tooltip"
+                [disabled]="promotionImportForm.importType.invalid"
+                (click)="saveImportData()">Save</button>
+    </div>
+
+</div>
+
+<ng-template #errorMessageTemplate>
+    <div class="error-msg">
+        {{errorMessage}}
+    </div>
+    <button mat-raised-button
+                class="error-page-close"
+                matTooltip="Close" 
+                matTooltipPosition="above"
+                matTooltipClass="pp-tooltip"
+                (click)="closeDialog()">Close</button>
+</ng-template>
+

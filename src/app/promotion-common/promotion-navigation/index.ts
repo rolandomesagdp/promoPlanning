@@ -1,0 +1,1 @@
+export * from './promotion-navigation.component';

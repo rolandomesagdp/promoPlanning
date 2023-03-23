@@ -1,0 +1,29 @@
+@import '../../../themes/pp-colors-palette.scss';
+
+.actions-menu {
+    &-icon {
+        color: $gray-dark;
+    }
+
+    &-trigger-icon {
+        cursor: pointer;
+    }
+
+    &-item-title {
+        color: $black;
+        font-family: Open Sans;
+        font-family: Open Sans;
+        font-size: 16px;
+        line-height: 142%;
+        letter-spacing: 0.25px;
+        font-weight: 500;
+    }
+
+    &-export-spinner {
+        display: flex;
+
+        &-title {
+            margin-left: 10%;
+        }
+    }
+}

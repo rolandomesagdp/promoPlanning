@@ -1,0 +1,56 @@
+<pp-page-header [title]="title">
+    <div class="actions-container" first-line>
+        <button class="action-button" 
+            mat-raised-button 
+            color="primary" 
+            (click)="import(TableNames.All)">
+            Import all
+        </button>
+    </div>
+</pp-page-header>
+
+<div *ngIf="(masterDataImportConfig && masterDataImportConfig.length > 0) || loading; else errorMessageTemplate" class="content-block">
+    <div class="import-promo-page-card">
+
+            <mat-table [dataSource]="masterDataImportConfig" class="master-data-table mat-elevation-z0">
+        
+                <ng-container matColumnDef="tableName">
+                    <mat-header-cell *matHeaderCellDef class="master-data-table-cell master-data-table-header master-data-table-cell-tablename">Table</mat-header-cell>
+                    <mat-cell class="master-data-table-cell master-data-table-cell-content master-data-table-cell-tablename" *matCellDef="let masterData">{{ masterData.tableName }}</mat-cell>
+                </ng-container>
+        
+                <ng-container matColumnDef="importSql">
+                    <mat-header-cell *matHeaderCellDef class="master-data-table-cell master-data-table-header">Definition (SQL code)</mat-header-cell>
+                    <mat-cell class="master-data-table-cell master-data-table-cell-content master-data-table-cell-importsql" *matCellDef="let masterData">{{ masterData.importSql }}</mat-cell>
+                </ng-container>
+        
+                <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef class="master-data-table-cell master-data-table-header master-data-table-cell-actions">Actions</mat-header-cell>
+                    <mat-cell class="master-data-table-cell master-data-table-cell-actions" *matCellDef="let masterData">
+                        <button class="master-data-table-button" mat-icon-button color="primary" 
+                            (click)="edit(masterData)" matTooltip="Edit"
+                            matTooltipPosition="below"  matTooltipClass="pp-tooltip">
+                            <mat-icon class="master-data-table-icon master-data-table-action-icon">edit</mat-icon>
+                        </button>
+                        <button class="master-data-table-button" mat-icon-button color="primary"
+                            (click)="import(masterData.tableName)" matTooltip="Import"
+                            matTooltipPosition="below"  matTooltipClass="pp-tooltip">
+                            <mat-icon class="master-data-table-icon master-data-table-action-icon">file_upload</mat-icon>
+                        </button>
+                    </mat-cell>
+                </ng-container>
+        
+                <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+        
+                <mat-row *matRowDef="let row; columns: columnsToDisplay;" class="custom-row"></mat-row>
+        
+            </mat-table>
+        
+        <pp-spinner *ngIf="loading"></pp-spinner>
+    </div>
+</div>
+
+<ng-template #errorMessageTemplate>
+    <pp-error-message [errorMessage]="errorMessage"></pp-error-message>
+</ng-template>
+

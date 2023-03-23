@@ -1,0 +1,41 @@
+@import "../../../themes/elements-styles/pp-outlined-material-form-inputs.scss";
+
+.login-form-card {
+  width: 20%;
+  height: 45%;
+  margin-left: 39%;
+  margin-top: 1%;
+
+  .title {
+    color: $gray-900;
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 24px;
+    width: 100%;
+    margin-top: 25%;
+    margin-left: 21%;
+  }
+
+  .login-form {
+    &-field {
+      width: 88%;
+      margin-left: 6%;
+      margin-top: 2%;
+    }
+  
+    .submit-button {
+      margin-top: 7%;
+      width: 88%;
+      height: 40px;
+      margin-left: 6%;
+  
+      .login-spinner {
+        margin-left: 40%;
+      }
+    }
+  }
+}
+
+.login-spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: $gray-50;
+}

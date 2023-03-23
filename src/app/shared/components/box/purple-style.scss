@@ -1,0 +1,15 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+$main-color: $violet-500;
+
+.purple-box-container {
+    background-color: $main-color;
+}
+
+.purple-box-icon-container {
+    background-color: $violet-100;
+}
+
+.purple-box-icon {
+    color: $main-color;
+}

@@ -1,0 +1,27 @@
+<dx-chart id="chart"
+				[dataSource]="chartDataSource.chartSeries"
+				[palette]="chartPalette"
+				(onPointClick)="onPointClick($event)">
+	<dxo-legend [visible]="false"></dxo-legend>
+	<dxi-series [type]="chartDataSource.chartType"></dxi-series>
+	<dxo-common-series-settings argumentField="argumentField" valueField="valueField"
+											hoverMode="none"
+											selectionMode="allArgumentPoints">
+		<dxo-label *ngIf="chartDataSource.chartSeries.length <= 10"
+						[visible]="true"
+						[format]="lableFormat">
+		</dxo-label>
+	</dxo-common-series-settings>
+	<dxo-tooltip [enabled]="true"
+				[customizeTooltip]="customizeTooltip"
+				[format]="lableFormat">
+	</dxo-tooltip>
+	<dxo-argument-axis [tickInterval]="20">
+		<dxo-label>
+			<dxo-format type="decimal"></dxo-format>
+		</dxo-label>
+	</dxo-argument-axis>
+	<dxo-title [text]="chartDataSource.chartTitle">
+		<dxo-subtitle [text]="chartDataSource.chartSubTitle"></dxo-subtitle>
+	</dxo-title>
+</dx-chart>

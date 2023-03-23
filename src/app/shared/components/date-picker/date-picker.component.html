@@ -1,0 +1,22 @@
+<div class="date-box-container">
+    <div *ngIf="displayLabel()" class="date-box-label">{{label}}</div>
+    <dx-date-box [ngClass]="getDateBoxClass()" type="date"
+        displayFormat="dd/MM/yyyy" 
+        [(value)]="selectedDate" showClearButton="true"
+        (onValueChanged)="onValueChaged($event.value)" 
+        (onOpened)="onOpened()" (onClosed)="onClosed()">
+        <dxo-calendar-options [firstDayOfWeek]="1">
+            <div *dxTemplate="let itemData of 'cell'">
+                <div *ngIf="displayWeekNumber(itemData); else elseBlock">
+                    <div class="week-cell">
+                        <div class="week-number">{{getIsoWeekNumber(itemData)}}</div> 
+                        <span>{{itemData.text}}</span>
+                    </div>
+                </div>
+                <ng-template #elseBlock><span>{{itemData.text}}</span></ng-template>
+            </div>
+        </dxo-calendar-options>
+    </dx-date-box>
+</div>
+
+

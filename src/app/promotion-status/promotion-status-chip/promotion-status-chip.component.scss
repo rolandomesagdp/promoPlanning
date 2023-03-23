@@ -1,0 +1,22 @@
+.promotion-status-chip {
+    color: white;
+    font-size: 12px;
+    width: 82px;
+    max-width: 82px;
+    text-align: center;
+
+    &.mat-chip.mat-standard-chip::after {
+        background: none;
+    }
+
+    &-title {
+        width: calc(100%);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &.mat-standard-chip {
+        min-height: 22px;
+    }
+}

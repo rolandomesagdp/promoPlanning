@@ -1,0 +1,41 @@
+@import '../../../../themes/elements-styles/pp-outlined-material-form-inputs.scss';
+
+.promotion-form-input-group {
+    width: 350px;
+    height: 95px;
+    margin-bottom: 10px;
+
+    &-error {
+        margin-top: -5px;
+    }
+}
+
+.promotion-form-date {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 80px;
+    margin-bottom: 10px;
+
+    &-input-group {
+        width: 170px;
+
+        &-label {
+            height: 24px;
+        }
+
+        &-picker {
+            height: 70px;
+        }
+
+        &-error {
+            margin-top: -21px;
+        }
+    }
+}
+
+.promotion-form-description-input {
+    width: 350px;
+    height: 95px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,27 @@
+@import '../../../themes/pp-colors-palette.scss';
+@import '../../../themes/pp-variables-base.scss';
+
+.report-page-card {
+    min-height: $content-card-min-height;
+}
+
+h3.pages-header {
+    font-size: 28px;
+    font-weight: 300;
+    margin-left: 1%;
+}
+
+.report-pages-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap
+}
+
+.report-page {
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.report-page :hover {
+    cursor: pointer;
+}

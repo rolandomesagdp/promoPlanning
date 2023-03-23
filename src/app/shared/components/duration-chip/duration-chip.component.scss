@@ -1,0 +1,17 @@
+@import "../../../../themes/pp-colors-palette.scss";
+
+.duration-chip {
+    font-size: 12px;
+    min-width: 60px;
+    justify-content: center;
+    background-color: $gray-50;
+    color: $gray-700;
+
+    &.mat-standard-chip {
+        min-height: 22px;
+        
+        &.mat-chip::after {
+            background: none;
+        }
+    }
+}

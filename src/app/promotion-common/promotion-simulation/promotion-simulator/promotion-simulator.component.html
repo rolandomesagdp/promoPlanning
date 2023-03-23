@@ -1,0 +1,72 @@
+<div class="promotion-simulation">
+    <div class="promotion-simulation-header">Simulation scenario</div>
+
+    <div class="promotion-simulation-summary" *ngIf="promotionSummary; else runSimulationTemplate">
+        <pp-promotion-summary
+            [promotion]="promotionSummary"
+            [showViewPromotionLink]="false">
+        </pp-promotion-summary>
+        <div class="promotion-simulation-summary-action">
+            <button id="accept-simulation-button"
+                class="promotion-simulation-summary-action-button promotion-simulation-summary-action-apply mat-elevation-z0" 
+                mat-raised-button
+                matTooltip="Click to apply this simulation." 
+                matTooltipPosition="right"
+                matTooltipClass="pp-tooltip"
+                [disabled]="actingOnSimulation"
+                (click)="acceptSimulation()">
+                <span *ngIf="!actingOnSimulation; else actingOnSimulationSpinnerTemplate">Accept simulation</span>
+                <ng-template #actingOnSimulationSpinnerTemplate>
+                    <span><pp-spinner diameter="20"></pp-spinner></span>
+                </ng-template>
+            </button>
+
+            <button id="reject-simulation-button" class="promotion-simulation-summary-action-button promotion-simulation-summary-action-reject mat-elevation-z0" 
+                mat-raised-button
+                matTooltip="Click to reject this simulation." 
+                matTooltipPosition="right"
+                matTooltipClass="pp-tooltip"
+                [disabled]="actingOnSimulation"
+                (click)="acceptSimulation()">
+                <span *ngIf="!actingOnSimulation; else actingOnSimulationSpinnerTemplate">Reject</span>
+                <ng-template #actingOnSimulationSpinnerTemplate>
+                    <span><pp-spinner diameter="20"></pp-spinner></span>
+                </ng-template>
+            </button>
+        </div>
+    </div>
+    <ng-template #runSimulationTemplate>
+        <mat-card class="promotion-simulation-card mat-elevation-z0" *ngIf="promotionPermissions.simulationIsAllowed(); else simulationNotAllowedTemplate">
+            <mat-card-header class="promotion-simulation-card-header">
+                <mat-card-title class="promotion-simulation-card-header-title">Simulate</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="promotion-simulation-card-content">
+                <p class="promotion-simulation-card-content-text">
+                    Change any detail in your promotion and visualize how those changes will affect to your future scenario.
+                </p>
+            </mat-card-content>
+            <mat-card-actions class="promotion-simulation-card-actions">
+                <button id="run-simulation-button" mat-raised-button color="primary" class="simulate-button mat-elevation-z0" 
+                    (click)="runSimulation()"
+                    [disabled]="simulating">
+                    <div *ngIf="!simulating; else simulationSpinnerDiv">Run simulation</div>
+                    <ng-template #simulationSpinnerDiv>
+                        <div class="simulation-button-spinner"><pp-spinner diameter="25"></pp-spinner></div>
+                    </ng-template>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+        <ng-template #simulationNotAllowedTemplate>
+            <mat-card class="promotion-simulation-card mat-elevation-z0">
+                <mat-card-header class="promotion-simulation-card-header">
+                    <mat-card-title class="promotion-simulation-card-header-title">Simulation not allowed</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="promotion-simulation-card-content">
+                    <p class="promotion-simulation-card-content-text">
+                        Simulation is only allowed for 'Planner' users and for future promotions with a Promotion Type assigned and at least one Participant associated to the promotion.
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </ng-template>
+    </ng-template>
+</div>

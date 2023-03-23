@@ -1,0 +1,61 @@
+<pp-promotion-details-tab-group>
+    <div general-info-tab>
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Promotion name</label>
+            <div class="promotion-detail-value">{{promotion.name}}</div>
+        </div>
+
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Promotion ID</label>
+            <div class="promotion-detail-value">{{promotion.promoId}}</div>
+        </div>
+
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Promotion description</label>
+            <div class="promotion-detail-value">{{promotion.description}}</div>
+        </div>
+
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Promotion type</label>
+            <div class="promotion-detail-value">{{promotion.promoTypeId | promotionType }}</div>
+        </div>
+
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Campaign</label>
+            <div class="promotion-detail-value">{{promotion.campaignId | campaign }}</div>
+        </div>
+
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Status</label>
+            <div class="promotion-detail-value">{{promotion.status | promotionStatus }}</div>
+        </div>
+
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Sell in period</label>
+            <div class="promotion-detail-value promotion-detail-period">
+                <div>{{promotion.sellInStartDate | date:"yyyy/MM/dd" }}-{{promotion.sellInEndDate | date:"yyyy/MM/dd" }}</div>
+                <div class="promotion-detail-period-chip">
+                    <pp-duration-chip [duration]="getDuration(promotion.sellInStartDate, promotion.sellInEndDate)"></pp-duration-chip>
+                </div>
+            </div>
+        </div>
+
+        <div class="promotion-details-group">
+            <label class="promotion-detail-lable">Sell out period</label>
+            <div class="promotion-detail-value promotion-detail-period">
+                <div>{{promotion.sellOutStartDate | date:"yyyy/MM/dd" }}-{{promotion.sellOutEndDate | date:"yyyy/MM/dd" }}</div>
+                <div class="promotion-detail-period-chip">
+                    <pp-duration-chip [duration]="getDuration(promotion.sellOutStartDate, promotion.sellOutEndDate)"></pp-duration-chip>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div promotion-attributes-tab>
+        <div *ngIf="attributes">
+            <div class="promotion-details-group" *ngFor="let promoAttribute of promotion.promoAttributes">
+                <label class="promotion-detail-lable">{{getAttributeName(promoAttribute)}}</label>
+                <div class="promotion-detail-value">{{promoAttribute.value }}</div>
+            </div>
+        </div>
+    </div>
+</pp-promotion-details-tab-group>

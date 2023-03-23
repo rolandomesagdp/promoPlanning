@@ -1,0 +1,15 @@
+<div class="main-container">
+    <div class="header-container">
+        <ng-content select="[promotion-form-header]"></ng-content>
+    </div>
+
+    <div class="body-container">
+        <div class="body-container-left-panel">
+            <ng-content select="[promotion-summary]"></ng-content>
+        </div>
+
+        <div class="body-container-right-panel">
+            <ng-content select="[form-main-content]"></ng-content>
+        </div>
+    </div>
+</div>

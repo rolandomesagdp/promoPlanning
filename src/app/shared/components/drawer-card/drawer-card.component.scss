@@ -1,0 +1,24 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.main-container {
+  background-color: $white;
+  margin-bottom: .4%;
+  margin-left: 1%;
+  min-height: 89vh;
+  width: 97%;
+  border-radius: 8px;
+  overflow-y: hidden;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 1%;
+
+  .side-pane {
+    min-width: 30%;
+    max-height: 1445px;
+    
+    &-container {
+      height: auto;
+    }
+  }
+}
+

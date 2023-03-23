@@ -1,0 +1,86 @@
+@import "../../../themes/pp-colors-palette.scss";
+
+.menu-item-container {
+    min-width: 193px;
+    overflow-x: hidden;
+    :hover {
+        background-color: rgba(0, 0, 0, 0.027);
+        cursor: pointer;
+    }
+    
+    .menu-item {
+        height: 57px;
+        display: flex;
+        justify-content: flex-start;
+
+       &-icon {
+            margin-left: 8px;
+            margin-top: 10px;
+            padding-left: 11px;
+            padding-top: 7px;
+            color: $gray-700;
+            width: 45px;
+            height: 45px;
+        }
+
+        &-icon-active {
+            margin-left: 8px;
+            margin-top: 10px;
+            padding-left: 11px;
+            padding-top: 7px;
+            color: $gray-700;
+            width: 45px;
+            height: 45px;
+        }
+
+        &-title {
+            font-family: Open Sans;
+            margin-left: 12px;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: $gray-700
+        }
+        &-expand-icon {
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: 11px;
+        }
+    }
+
+    .menu-item-active {
+        background-color: $primary-light;
+    }
+}
+
+.menu-item-childs-container {
+    //These are the childs of .menu-item-childs-container with a class of .menu-item
+    .menu-item-icon {
+        color: $gray-600;
+        font-weight: 400;
+    }
+
+    .menu-item-title {
+        color: $gray-600;
+        font-weight: 400;
+    }
+}
+
+.menu-item-childs-container-hidden {
+    height: 0px;
+    overflow: hidden;
+}
+
+.no-heightlight {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    :focus {
+        outline: none !important;
+    }
+}

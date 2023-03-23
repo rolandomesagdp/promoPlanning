@@ -1,0 +1,37 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.uplift-chip {
+    font-size: 12px;
+    width: 68px;
+    justify-content: center;
+
+    .uplift-value {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &.mat-standard-chip {
+        min-height: 22px;
+        
+        &.mat-chip::after {
+            background: none;
+        }
+    }
+
+    & .mat-icon {
+        margin-top: 12px;
+        font-size: 12px;
+        width: 12px;
+    }
+}
+
+.positive-value-chip {
+    background-color: $success-50;
+    color: $success-700;
+}
+
+.negative-value-chip {
+    background-color: $error-50;
+    color: $error-700;
+}

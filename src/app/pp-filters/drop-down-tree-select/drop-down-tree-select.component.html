@@ -1,0 +1,10 @@
+<div class="tree-main-container">
+    <dx-drop-down-box [(value)]="currentSelectedNode" placeholder="Select a value..." [showClearButton]="true">
+    <dx-tree-view id="simple-treeview" [items]="filtersListData" 
+        dataStructure="plain" 
+        displayExpr="name"
+        (onItemExpanded)="itemExpanded($event)"
+        (onItemClick)="onItemClick($event.node.itemData)">
+    </dx-tree-view>
+</dx-drop-down-box>
+</div>

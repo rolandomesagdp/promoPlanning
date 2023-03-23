@@ -1,0 +1,88 @@
+@import "../../../../../themes/pp-colors-palette.scss";
+
+.content-block {
+    min-height: 65vh;
+}
+
+.import-all-button {
+  margin-left: 90%;
+}
+
+.green-icon {
+  color: $success-main;
+}
+
+.mat-column-action {
+  flex: 0 0 12%;
+}
+
+
+  .grid-table {
+      border: 1px solid $gray-200;
+
+      &-header {
+          color: $black;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 133%;
+      }
+      &-header-insert-record {
+        justify-content: center;
+        color: $black;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 133%;
+      }
+
+      &-header-action {
+        justify-content: center;
+        color: $black;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 133%;
+      }
+
+      &-cell {
+          text-align: center;
+      }
+
+      &-cell-insert-record {
+          justify-content: center;
+      }
+
+      &-cell-action {
+        justify-content: center;
+    }
+
+      &-cell-content {
+          color: $black;
+          font-family: Open Sans;
+          font-family: Open Sans;
+          font-size: 14px;
+          line-height: 142%;
+          letter-spacing: 0.25px;
+      }
+
+      &-button.mat-icon-button {
+          padding: 0;
+          min-width: 0;
+          width: 28px;
+          height: 28px;
+          flex-shrink: 0;
+          line-height: 28px;
+          border-radius: 50%;
+      }
+
+      &-icon {
+          font-size: 20px;
+      }
+      &-action-icon {
+          color: $gray-600;
+      }
+  }

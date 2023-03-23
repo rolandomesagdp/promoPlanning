@@ -1,0 +1,50 @@
+@import "../../../themes/pp-colors-palette.scss";
+
+:host {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .layout-header {
+      height: 75px;
+    }
+
+    .layout-body {
+      height: 100%;
+      background-color: $gray-25;
+    
+      .sidenav {
+        transition: all .3s linear;
+      }
+    
+      .sidenav-expanded {
+        width: 280px;
+        overflow: hidden;
+        border: none !important;
+        background-color: $gray-25;
+      }
+      
+      .sidenav-collapsed {
+        width: 63px;
+        overflow: hidden;
+        border: none !important;
+        background-color: $gray-25;
+      }
+      
+      .layout-content {
+        transition: all .3s linear;
+      }
+      .layout-content-collapsed {
+        margin-left: 285px !important;
+      }
+    
+      .layout-content-expanded {
+        margin-left: 63px !important;
+      }
+    }
+    
+    .sidenav.mat-drawer:not(.mat-drawer-side) {
+      box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 5px 2px rgb(0 0 0 / 14%), 0px 6px 20px 0px rgb(0 0 0 / 12%);
+    }
+}

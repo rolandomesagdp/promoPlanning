@@ -1,0 +1,41 @@
+<h3 mat-dialog-title class="dialog-title">Promotion configuration details</h3>
+
+<div mat-dialog-content class="import-details-content">
+    <div *ngIf="!errorMessage; else errorMessageTemplate">
+        <div class="import-detail-line-container">
+            <div class="import-label">Import type:</div>
+            <div class="import-value">{{data.description}}</div>
+        </div>
+    
+        <div class="import-detail-line-container">
+            <div class="import-label">Description:</div>
+            <div class="import-value">{{longDescription}}</div>
+        </div>
+    
+        <div class="import-detail-line-container">
+            <div class="import-label">Source table:</div>
+            <div class="import-value">{{data.importTable}}</div>
+        </div>
+    
+        <div class="import-detail-line-container">
+            <div class="import-label">Format:</div>
+            <div class="import-value">{{format}}</div>
+        </div>
+    </div>
+
+    <ng-template #errorMessageTemplate>
+        <div class="error-msg">
+            {{errorMessage}}
+        </div>
+    </ng-template>
+</div>
+
+
+<div mat-dialog-actions align="end">
+    <button mat-raised-button
+    matTooltip="Close" 
+    matTooltipPosition="above"
+    matTooltipClass="pp-tooltip"
+    (click)="closeDialog()">Close</button>
+</div>
+

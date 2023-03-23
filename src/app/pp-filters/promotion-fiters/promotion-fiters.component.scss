@@ -1,0 +1,23 @@
+@import '../../../themes/pp-colors-palette.scss';
+
+.filters-toolbar {
+  margin-top: 4%;
+  background: $gray-50;
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .action-button {
+    margin-right: 3%;
+    color: $gray-50;
+
+    &-icon {
+          font-size: large;
+        }
+  }
+}
+
+.filters-container {
+  margin-top: 10%
+}

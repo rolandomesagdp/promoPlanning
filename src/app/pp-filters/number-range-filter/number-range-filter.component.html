@@ -1,0 +1,6 @@
+<dx-range-slider class="number-range-slider" [min]="0" [max]="100"
+    [(start)]="rangeStart" [(end)]="rangeEnd"
+    (onValueChanged)="onRangeChanged($event)">
+    <dxo-label [visible]="true" [format]="lableFormat" position="top"></dxo-label>
+    <dxo-tooltip [enabled]="true" [format]="tooltipFormat" position="top" showMode="onHover"></dxo-tooltip>
+</dx-range-slider>

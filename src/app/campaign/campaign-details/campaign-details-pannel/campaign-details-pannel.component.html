@@ -1,0 +1,41 @@
+<ng-container *ngIf="campaign; else spinnerTemplate">
+    <div class="campaign-details-title">Campaign details</div>
+    <p class="campaign-details-subtitle">Review summary and edit details of your campaign</p>
+    <div class="campaign-details-body">
+        <ng-container *ngIf="!editModeEnabled; else campaignFormTemplate">
+            <pp-campaign-details-read [campaign]="campaign" [attributes]="attributes"></pp-campaign-details-read>
+        </ng-container>
+        <ng-template #campaignFormTemplate>
+            <!-- <pp-campaign-details-form [campaign]="viewModel.campaign"></pp-campaign-details-form> -->
+        </ng-template>
+    </div>
+    <mat-divider class="campaign-details-actions-devider"></mat-divider>
+    <div class="campaign-details-actions">
+        <button class="action-button mat-elevation-z0" mat-raised-button color="primary"
+            *ngIf="!editModeEnabled" 
+            (click)="editPromotion()">
+            <mat-icon class="action-button-icon">mode_edit</mat-icon> Edit
+        </button>
+
+        <!-- <button class="action-button action-save-button mat-elevation-z0" color="primary"
+            mat-raised-button *ngIf="actions.editModeEnabled" 
+            (click)="actions.update()"
+            [disabled]="!promotionSaveButtonEnabled">
+            <ng-container *ngIf="!actions.savingPromotionData; else saveSpinnerTemplate">
+                <mat-icon class="action-button-icon">save</mat-icon> Save
+            </ng-container>
+
+            <ng-template #saveSpinnerTemplate>
+                <div class="promotion-form-action-button-spinner"><pp-spinner diameter="23"></pp-spinner></div>
+            </ng-template>
+        </button> -->
+
+        <button class="action-button action-extra-button mat-elevation-z0" mat-raised-button 
+            (click)="closeDrawer()" 
+            [disabled]="closeButtonEnabled">Close</button>
+        <!-- <pp-campaign-details-actions [campaign]="viewModel.campaign"></pp-campaign-details-actions> -->
+    </div>
+</ng-container>
+<ng-template #spinnerTemplate>
+    <pp-spinner diameter="60"></pp-spinner>
+</ng-template>

@@ -1,0 +1,33 @@
+@import "../../../../../themes/pp-colors-palette.scss";
+
+.title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: $gray-700;
+}
+
+.sub-title {
+    line-height: 133%;
+    color: $gray-700;
+}
+
+.text-area {
+    margin-top: 2%;
+    min-height: 200px;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+.button-margin {
+    margin-right: 1%;
+}
+
+.error-msg {
+    color: $error-main;
+    font-size: 14px;
+    min-height: 80%;
+}

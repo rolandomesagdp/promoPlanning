@@ -1,0 +1,17 @@
+<pp-page-header [title]="'Promotions'" 
+    [subtitle]="subtitle"
+    [hint]="itensTracking" 
+    color="primary">
+        <pp-unit-of-measurement-selector page-header-actions></pp-unit-of-measurement-selector>
+        <button page-header-actions class="promotion-navigation-action-button" mat-raised-button color="primary" 
+            *ngIf="actionButtonTitle"
+            (click)="onActionButtonClicked()">
+            <mat-icon class="promotion-navigation-action-button-icon">add</mat-icon>
+            {{actionButtonTitle}}
+        </button>
+
+    <pp-page-header-navigation page-header-body [navigationItems]="promotionNavigationItems"
+        [activeNavigationItem]="activeNavigation" 
+        (navigationItemClicked)="onNavigationItemClicked($event)">
+    </pp-page-header-navigation>
+</pp-page-header>

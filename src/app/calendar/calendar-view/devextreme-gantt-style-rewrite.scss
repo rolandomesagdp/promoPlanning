@@ -1,0 +1,40 @@
+/*Gantt Toolbar styling*/
+::ng-deep .dx-toolbar .dx-toolbar-after {
+	margin-right: 0.5%;
+}
+
+/*Gantt table headers */
+::ng-deep .dx-treelist-headers .dx-treelist-table .dx-row > td {
+	text-align: center !important;
+	height: 61px !important;
+}
+
+::ng-deep .dx-treelist-text-content[role=presentation] {
+	margin-top: 22px;
+}
+
+/*Gantt table header text */
+::ng-deep .dx-treelist-nowrap, .dx-treelist-nowrap .dx-header-row > td > .dx-treelist-text-content {
+	font-size: small;
+	font-weight: normal;
+}
+
+::ng-deep .dx-treelist-headers {
+	color: #808699;
+}
+
+/*Gantt table group headers */
+::ng-deep .dx-row.dx-data-row.dx-row-lines.dx-column-lines.dx-gantt-collapsable-row[role="row"] {
+	font-weight: 900;
+	color: #000;
+}
+
+/*Gantt separator between left and right sides*/
+::ng-deep .dx-gantt .dx-splitter-wrapper .dx-splitter-border .dx-splitter {
+	width: 7px;
+}
+
+/*Gantt timeline remove of vertical lines */
+::ng-deep .dx-gantt .dx-gantt-vb {
+	border-left: none;
+}

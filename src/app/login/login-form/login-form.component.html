@@ -1,0 +1,44 @@
+<div class="content-block">
+  <mat-card class="login-form-card">
+    <mat-card-header>
+      <mat-card-title class="title">Sign in</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="login-form" (submit)="onSubmit()" [formGroup]="loginForm">
+        <div class="login-form-field form-row-element-group">
+          <mat-label class="form-row-element-group-label">User Name</mat-label>
+          <mat-form-field>
+            <input matInput type="text" class="form-row-element-group-input userID-input" formControlName="userID">
+            <mat-error class="form-row-element-group-input-error userID-error"
+              *ngIf="inputHasError('userID', 'required')">
+              User Name is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <br />
+
+        <div class="login-form-field form-row-element-group">
+          <mat-label class="form-row-element-group-label">Password</mat-label>
+          <mat-form-field>
+            <input type="password" class="form-row-element-group-input password-input" matInput
+              formControlName="password">
+            <mat-error class="form-row-element-group-input-error password-error"
+              *ngIf="inputHasError('password', 'required')">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <button type="submit" mat-raised-button color="primary" class="submit-button" [disabled]="!loginForm.valid">
+          <div *ngIf="!loading; else spinnerDiv">SIGN IN</div>
+          <ng-template #spinnerDiv>
+            <div class="login-spinner">
+              <pp-spinner id="login-spinner" diameter="30"></pp-spinner>
+            </div>
+          </ng-template>
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

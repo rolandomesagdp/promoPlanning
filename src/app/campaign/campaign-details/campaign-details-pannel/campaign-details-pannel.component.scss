@@ -1,0 +1,80 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.campaign-details-title {
+    color: $gray-900;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    height: 28px;
+    margin-left: 10px;
+    padding-top: 1.5%;
+}
+
+.campaign-details-subtitle {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 10px;
+    color: $gray-500;
+}
+
+.campaign-details-body {
+    height: 680px;
+    margin-top: 25px;
+}
+
+.campaign-details-actions-devider {
+    background-color: $gray-200;
+}
+
+.campaign-details-actions {
+    margin-top: 12px;
+}
+
+.action {
+    display: flex;
+    justify-content: flex-start;
+
+    &-button {
+        margin-left: 15px;
+        border-radius: 8px;
+
+        &-icon {
+            font-size: 18px;
+            padding-top: 2px;
+        }
+    }
+    
+    &-settings-button {
+        color: $primary-700;
+        background-color: $primary-50;
+    
+        &-icon {
+            color: $primary-main
+        }
+    }
+
+    &-save-button {
+        min-width: 92px;
+    }
+    
+    &-extra-button {
+        border: 1px solid $gray-300;
+        color: $gray-700;
+    }
+
+    &-copy-button-icon {
+        color: $gray-dark;
+    }
+
+    &-more {
+        margin-top: 8px;
+    }
+}
+
+::ng-deep .promotion-form-action-button-spinner .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: $white;
+}

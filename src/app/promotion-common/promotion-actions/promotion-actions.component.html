@@ -1,0 +1,106 @@
+<div class="actions-menu">
+    <mat-icon class="actions-menu-icon actions-menu-trigger-icon" 
+        [matMenuTriggerFor]="menu"
+        #actionsMenuTrigger="matMenuTrigger"
+        matTooltip="More actions over promotion '{{promotion.name}}'" 
+        matTooltipPosition="right"
+        matTooltipClass="pp-tooltip">more_vert</mat-icon>
+    <mat-menu #menu>
+        <button id="forecast-menu-item" class="copy-promotion-button-test" mat-menu-item
+            (click)="actions.editForecast(promotion)"
+            [matTooltip]="getForecastActionTooltip()"
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <mat-icon class="actions-menu-icon">query_stats</mat-icon>
+            <span class="actions-menu-item-title">Forecast</span>
+        </button>
+
+        <button id="participants-menu-item" class="copy-promotion-button-test" mat-menu-item
+            *ngIf="!promotion.isLocked && actions.promotionPermissions.userCanWrite()"
+            (click)="actions.addParticipants(promotion)"
+            matTooltip="Add participants to promotion '{{promotion.name}}'"
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <mat-icon class="actions-menu-icon">add_circle</mat-icon>
+            <span class="actions-menu-item-title">Add Participants</span>
+        </button>
+
+        <button id="participant-attributes-item" class="copy-promotion-button-test" mat-menu-item
+            *ngIf="!promotion.isLocked && actions.promotionPermissions.userCanWrite()"
+            (click)="actions.participantAttributes(promotion)"
+            matTooltip="Edit participant attributes for promotion '{{promotion.name}}'"
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <mat-icon class="actions-menu-icon">view_list</mat-icon>
+            <span class="actions-menu-item-title">Participant Attributes</span>
+        </button>
+
+        <button id="roi-item" class="copy-promotion-button-test" mat-menu-item
+            *ngIf="actions.promotionPermissions.userCanReadRoi()"
+            (click)="actions.promotionRoi(promotion)"
+            matTooltip="View return on investment for promotion '{{promotion.name}}'"
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <mat-icon class="actions-menu-icon">monetization_on</mat-icon>
+            <span class="actions-menu-item-title">Return on investment</span>
+        </button>
+
+        <button id="unlock-request-item" class="copy-promotion-button-test" mat-menu-item
+            *ngIf="promotion.isLocked && actions.promotionPermissions.userCanUnlock()"
+            (click)="actions.requestPromotionUnlock(promotion)"
+            matTooltip="Locked by user '{{promotion.lockedUser}}' at {{promotion.lockStartTime | date : 'mediumTime'}}. Click to issue an unlock request."
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <mat-icon class="actions-menu-icon">lock</mat-icon>
+            <span class="actions-menu-item-title">Request unlock</span>
+        </button>
+
+        <button id="force-unlock-item" class="copy-promotion-button-test" mat-menu-item
+            *ngIf="promotion.isLocked && actions.promotionPermissions.userIsAdmin()"
+            matTooltip="Locked by user '{{promotion.lockedUser}}' at {{promotion.lockStartTime | date : 'mediumTime'}}. Click to force an unlock."
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip"
+            (click)="actions.issueForcedPromotionUnlock(promotion)">
+            <mat-icon class="actions-menu-icon">lock_open</mat-icon>
+            <span class="actions-menu-item-title">Force unlock</span>
+        </button>
+
+        <button id="copy-promotion-item" class="copy-promotion-button-test" mat-menu-item 
+            *ngIf="showCopyAction"
+            [disabled]="!actions.promotionPermissions.userCanCopy()" 
+            (click)="actions.copyPromotion(promotion)"
+            matTooltip="Click here to copy all this promotion's data to a new promotion form."
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <mat-icon class="actions-menu-icon">content_copy</mat-icon>
+            <span class="actions-menu-item-title">Copy Promotion</span>
+        </button>
+
+        <button id="export-promo-item" class="export-button-test" mat-menu-item [disabled]="!actions.promotionPermissions.userCanExport() || exportingPromotion" 
+            (click)="onExportPromotionClicked($event)"
+            matTooltip="Click here to export the promotion to a csv file." 
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <span *ngIf="!exportingPromotion; else exportingPromotionTemplate">
+                <mat-icon class="actions-menu-icon">download</mat-icon>
+                <span class="actions-menu-item-title">Export</span>
+            </span>
+            <ng-template #exportingPromotionTemplate>
+                <span class="actions-menu-export-spinner">
+                    <mat-spinner mode="indeterminate" [diameter]="22"></mat-spinner>
+                    <span class="actions-menu-export-spinner-title actions-menu-item-title">Export</span>
+                </span>
+            </ng-template>
+        </button>
+
+        <button id="delete-item" class="copy-promotion-button-test" mat-menu-item
+            *ngIf="actions.promotionPermissions.userCanDelete() && !promotion.isLocked && showDeleteAction"
+            (click)="onDeleteButtonClicked(promotion)"
+            matTooltip="Delete promotion {{promotion.name}}"
+            matTooltipPosition="right"
+            matTooltipClass="pp-tooltip">
+            <mat-icon class="actions-menu-icon">delete_outline</mat-icon>
+            <span class="actions-menu-item-title">Delete</span>
+        </button>
+    </mat-menu>
+</div>

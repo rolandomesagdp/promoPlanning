@@ -1,0 +1,44 @@
+<ng-container *ngIf="promotion">
+    <div class="action">
+        <button class="action-button action-settings-button mat-elevation-z0" 
+            mat-raised-button
+            (click)="actions.editForecast(promotion)">
+            <mat-icon class="action-button-icon action-settings-button-icon">settings</mat-icon> Promo Settings
+        </button>
+
+        <button class="action-button mat-elevation-z0" mat-raised-button color="primary"
+            *ngIf="!actions.editModeEnabled" 
+            (click)="editPromotion()"
+            [disabled]="!promotionEditButtonEnabled">
+            <mat-icon class="action-button-icon">mode_edit</mat-icon> Edit
+        </button>
+
+        <button class="action-button action-save-button mat-elevation-z0" color="primary"
+            mat-raised-button *ngIf="actions.editModeEnabled" 
+            (click)="actions.update()"
+            [disabled]="!promotionSaveButtonEnabled">
+            <ng-container *ngIf="!actions.savingPromotionData; else saveSpinnerTemplate">
+                <mat-icon class="action-button-icon">save</mat-icon> Save
+            </ng-container>
+
+            <ng-template #saveSpinnerTemplate>
+                <div class="promotion-form-action-button-spinner"><pp-spinner diameter="23"></pp-spinner></div>
+            </ng-template>
+        </button>
+
+        <button class="action-button action-extra-button mat-elevation-z0" mat-raised-button 
+            (click)="actions.copyPromotion(promotion)">
+            <mat-icon class="action-button-icon action-copy-button-icon">file_copy</mat-icon> Copy
+        </button>
+
+        <button class="action-button action-extra-button mat-elevation-z0" mat-raised-button 
+            (click)="actions.closeDrawer()" 
+            [disabled]="closeButtonEnabled">Close</button>
+        
+        <div class="action-button action-more"><pp-promotion-actions class="more-actions" 
+            [promotion]="promotion"
+            [showCopyAction]="false"
+            [showDeleteAction]="false"></pp-promotion-actions></div>
+        
+    </div>
+</ng-container>

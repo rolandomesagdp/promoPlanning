@@ -1,0 +1,80 @@
+@import '../../../../../themes/pp-colors-palette.scss';
+
+.pp-navigation {
+    border: 1px solid $gray-300;
+    border-radius: 8px;
+}
+
+.navigation-item-border {
+    border-right: 1px solid $gray-300;
+}
+
+.pp-navigation-item {
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 133%;
+    letter-spacing: 0.5px;
+}
+
+.pp-navigation-item:hover {
+    cursor: pointer;
+}
+
+.pp-navigation-item-content {
+    display: flex; 
+    justify-content: flex-start;
+    height: 40px;
+    min-width: 121px;  
+    padding-top: 10px; 
+}
+
+.pp-navigation-item-content-icon {
+    margin-right: 2%;
+    font-size: 22px;
+    width: 27px;
+}
+
+.pp-navigation-item-content-title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.pp-navigation-item-active {
+    color: $gray-800;
+    background-color: $gray-50;
+}
+
+.pp-navigation-item-inactive {
+    color: $gray-700;
+    background-color: $white;
+}
+
+.pp-navigation-item-inactive:hover {
+    background-color: $gray-25;
+}
+
+.pp-navigation-item-inactive::after {
+    background-color: #0000;    
+}
+
+.pp-navigation-item-inactive-icon {
+    color: $gray-500;
+}
+
+::ng-deep .pp-navigation-item .mat-button-toggle-button {
+    border: 0;
+    background: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+}

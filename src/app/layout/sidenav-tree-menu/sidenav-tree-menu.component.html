@@ -1,0 +1,22 @@
+<div *ngFor="let menuItem of parentMenu">
+    <div class="menu-item-container" 
+        matRipple (click)="onMenuItemClick(menuItem)">
+        <div [ngClass]="getMenuItemClass(menuItem)">
+            <mat-icon *ngIf="menuItem.icon" 
+                [ngClass]="getMenuItemIconClass(menuItem)"
+                [matTooltip]="menuItem.tooltip" 
+                matTooltipPosition="after" 
+                matTooltipClass="pp-tooltip">{{menuItem.icon}}</mat-icon>
+            <span class="menu-item-title no-heightlight">{{menuItem.title}}</span>
+            <mat-icon class="menu-item-expand-icon no-heightlight"
+                    *ngIf="menuItem.hasSubMenu && sidenavMenuService.sidenavMenuExpanded">{{getExpandIcon(menuItem)}}</mat-icon>
+        </div>
+    </div>
+    
+    <div *ngIf="menuItem.hasSubMenu" 
+        [id]="'sub-menu-'+ menuItem.id"
+        [ngClass]="childContainerClass">
+        <pp-sidenav-tree-menu [menuLevel]="menuLevel + 1" [parentMenuId]="menuItem.id"></pp-sidenav-tree-menu>
+    </div>
+    <mat-divider *ngIf="menuLevel === 1 && sidenavMenuService.sidenavMenuExpanded" class="first-level-item-divider"></mat-divider>
+</div>

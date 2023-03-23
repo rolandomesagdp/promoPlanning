@@ -1,0 +1,7 @@
+:host {
+  @import "../themes/pp-colors-palette.scss";
+  background-color: $gray-25;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}

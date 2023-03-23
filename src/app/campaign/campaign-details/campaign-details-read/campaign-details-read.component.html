@@ -1,0 +1,48 @@
+<mat-tab-group class="campaign-details-tabs-group" mat-align-tabs="start" [selectedIndex]="0" animationDuration="0ms">
+    <mat-tab label="General information">
+        <div class="campaign-details-tab-container">
+            <div general-info-tab>
+                <div class="campaign-details-group">
+                    <label class="campaign-detail-lable">Campaign name</label>
+                    <div class="campaign-detail-value">{{campaign.name}}</div>
+                </div>
+        
+                <div class="campaign-details-group">
+                    <label class="campaign-detail-lable">Campaign ID</label>
+                    <div class="campaign-detail-value">{{campaign.campaignId}}</div>
+                </div>
+        
+                <div class="campaign-details-group">
+                    <label class="campaign-detail-lable">Campaign description</label>
+                    <div class="campaign-detail-value">{{campaign.description}}</div>
+                </div>
+        
+                <div class="campaign-details-group">
+                    <label class="campaign-detail-lable">Start date</label>
+                    <div class="campaign-detail-value campaign-detail-period">
+                        <div>{{campaign.startDate | date:"yyyy/MM/dd" }}</div>
+                    </div>
+                </div>
+        
+                <div class="campaign-details-group">
+                    <label class="campaign-detail-lable">End date</label>
+                    <div class="campaign-detail-value campaign-detail-period">
+                        <div>{{campaign.endDate | date:"yyyy/MM/dd" }}</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </mat-tab>
+    <mat-tab label="campaign attributes">
+        <div class="campaign-details-tab-container">
+                <!-- <div *ngIf="attributes">
+                    <div class="campaign-details-group" *ngFor="let promoAttribute of campaign.promoAttributes">
+                        <label class="campaign-detail-lable">{{getAttributeName(promoAttribute)}}</label>
+                        <div class="campaign-detail-value">{{promoAttribute.value }}</div>
+                    </div>
+                </div> -->
+        </div>
+    </mat-tab>
+</mat-tab-group>
+

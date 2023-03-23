@@ -1,0 +1,69 @@
+@import '../../../../../themes/pp-colors-palette.scss';
+
+.primary {
+    color: $black;
+}
+
+.accent {
+    color: $success-main;
+}
+
+.warning {
+    color: $warning-main;
+}
+
+.error {
+    color: $error-main;
+}
+
+.page-header {
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 15px;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+
+        &-title {
+            display: flex;
+            justify-content: flex-start;
+    
+            &-text {
+                margin-right: 11px;
+            }
+    
+            &-hint {
+                background-color: $primary-50;
+                color: $primary-700;
+                margin-top: 3px;
+                border-radius: 50px;
+                padding-top: 1px;
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-bottom: 0px;
+                height: 22px;
+            }
+        }
+    
+        &-subtitle {
+            color: $gray-500;
+            font-family: Open Sans;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 7px;
+        }
+
+        &-actions {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+    }
+}
+
+.page-header-body {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+}

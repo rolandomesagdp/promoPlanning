@@ -1,0 +1,17 @@
+<h2 id="title" class="content-block title">{{title}}</h2>
+<div class="content-block">
+    <mat-card class="report-page-card">
+        <h3 id="subtitle" class="pages-header">{{subtitle}}</h3>
+
+        <div class="report-pages-container" *ngIf="reportPages$ | async as reportPages; else spinnerDiv">
+            <div *ngFor="let reportPage of reportPages; let i = index" class="report-page">
+                <pp-box [boxModel]="buildBoxModel(reportPage)" (click)="navigateToReportsPage(reportPage)">
+                </pp-box>
+            </div>
+        </div>
+
+        <ng-template #spinnerDiv>
+            <pp-spinner></pp-spinner>
+        </ng-template>
+    </mat-card>
+</div>

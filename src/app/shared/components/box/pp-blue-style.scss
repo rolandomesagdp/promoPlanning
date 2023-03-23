@@ -1,0 +1,15 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+$main-color: $bluelight-500;
+
+.pp-blue-box-container {
+    background-color: $main-color;
+}
+
+.pp-blue-box-icon-container {
+    background-color: $bluelight-100;
+}
+
+.pp-blue-box-icon {
+    color: $main-color;
+}

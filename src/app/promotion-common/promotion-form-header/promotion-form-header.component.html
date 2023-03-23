@@ -1,0 +1,18 @@
+<pp-page-header [title]="title" color="primary">
+    <div class="form-header-first-line" first-line>
+        <pp-page-header-navigation [navigationItems]="navItems" [activeNavigationItem]="activeNavItem"
+            (navigationItemClicked)="onNavigationItemClick($event)">
+        </pp-page-header-navigation>
+
+        <div class="actions-container">
+            <button class="actions save-button" color="accent" mat-raised-button *ngIf="showSaveButton"
+                (click)="onSaveButtonClicked()" [disabled]="saveButtonDisabled">Save</button>
+            
+            <button class="actions close-button" mat-raised-button (click)="closeForm()">Close</button>
+
+            <pp-promotion-form-header-actions class="more-actions more-actions-test" *ngIf="promotion && showMoreActionsMenu"
+                [promotion]="promotion">
+            </pp-promotion-form-header-actions>
+        </div>
+    </div>
+</pp-page-header>

@@ -1,0 +1,9 @@
+<mat-chip-list>
+    <mat-chip class="promotion-status-chip" *ngIf="chipText" 
+        [ngStyle]="{'background-color': chipColor}"
+        [matTooltip]="chipTooltip" 
+        matTooltipPosition="below"
+        matTooltipClass="pp-tooltip">
+        <span class="promotion-status-chip-title">{{chipText}}</span>
+    </mat-chip>
+</mat-chip-list>

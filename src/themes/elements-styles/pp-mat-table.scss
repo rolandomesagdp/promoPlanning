@@ -1,0 +1,92 @@
+@import '../../themes/pp-colors-palette.scss';
+
+.mat-table-container {
+    min-height: 68vh;
+}
+
+.pp-mat-table {
+    width: 100%;
+    border-top: 1px solid $gray-50;
+
+    &-header-row {
+        height: 44px;
+    }
+
+    &-header {
+        color: $text-header;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 133%;
+        background-color: #F7F7F7;
+    }
+
+    &-cell {
+        text-align: center;
+
+        &-actions-container {
+            display: flex;
+            justify-content: center;
+            padding-left: 25%;
+
+            .more-actions {
+                margin-top: 3%;
+            }
+        }
+    }
+
+    &-chip {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-first-cell {
+        text-align: left;
+    }
+
+    &-cell-content {
+        color: $text-data;
+        font-family: Open Sans;
+        font-family: Open Sans;
+        font-size: 14px;
+        line-height: 142%;
+        letter-spacing: 0.25px;
+    }
+
+    &-name-cell {
+        color: $gray-900;
+        font-weight: 600;
+    }
+
+    &-flag-cell {
+        text-align: right;
+    }
+
+    &-button.mat-icon-button {
+        padding: 0;
+        min-width: 0;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        line-height: 28px;
+        border-radius: 50%;
+    }
+
+    &-icon {
+        font-size: 20px;
+    }
+
+    &-action-icon {
+        color: $gray-dark;
+    }
+
+    &-action-icon-disabled {
+        color: $gray-100;
+    }
+
+    &-paginator {
+        margin-top: 1%;
+        margin-right: 2%;
+    }
+}

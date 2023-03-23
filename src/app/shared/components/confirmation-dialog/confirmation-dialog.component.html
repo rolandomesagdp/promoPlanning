@@ -1,0 +1,19 @@
+<h3 mat-dialog-title class="confirmation-title">{{confirmDialogData.title}}</h3>
+
+<div mat-dialog-content>
+  <p class="confirmation-message">{{confirmDialogData.message}}</p>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-raised-button class="button-margin" 
+    *ngIf='confirmDialogData.rejectButton'
+    (click)="onReject()">
+    {{confirmDialogData.rejectButtonText}}
+  </button>
+
+  <button mat-raised-button color="primary" 
+    *ngIf='confirmDialogData.acceptButton' 
+    (click)="onAccept()">
+    {{confirmDialogData.acceptButtonText}}
+  </button>
+</div>

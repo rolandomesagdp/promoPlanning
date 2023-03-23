@@ -1,0 +1,29 @@
+.snackbar-success {
+    background-color: #54bd59;
+    color: #161616
+}
+
+.snackbar-success .mat-simple-snackbar-action  {
+    background-color: #45b14a;
+    color: #2b2b2c;
+}
+
+.snackbar-warn  {
+    background-color: #eaae42;
+    color: #2b2b2c;
+}
+
+.snackbar-warn .mat-simple-snackbar-action  {
+    background-color: #e2a533;
+    color: #2b2b2c;
+}
+
+.snackbar-error {
+    background-color: #f34141;
+    color: #fff
+}
+
+.snackbar-error .mat-simple-snackbar-action  {
+    background-color: #e73939;
+    color: #fff;
+}

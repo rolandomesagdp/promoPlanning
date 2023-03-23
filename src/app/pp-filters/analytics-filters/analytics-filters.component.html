@@ -1,0 +1,78 @@
+<mat-toolbar class="filters-toolbar">
+    <h4 class="content-block">Report filters</h4>
+    <span class="spacer"></span>
+    <button type="button" class="side-pane-apply-button" mat-raised-button (click)="onApply()"
+        matTooltip="Apply filters" matTooltipPosition="below" matTooltipClass="pp-tooltip">
+        <mat-icon class="filter-button-icon" inline=true>filter_alt</mat-icon> Apply
+    </button>
+</mat-toolbar>
+
+<div class="filters-container" *ngIf="viewModel.vm$ | async as vm">
+    <pp-collapsable-wrapper wrapperTitle="Promotion Dates">
+        <pp-date-rage-filter ppFilter [(ngModel)]="filtersManager.filters.datesRange"></pp-date-rage-filter>
+    </pp-collapsable-wrapper>
+    <mat-divider></mat-divider>
+
+    <pp-collapsable-wrapper wrapperTitle="Promotion Attributes">
+        <pp-drop-down-tree-select ppFilter 
+        [filtersList]="vm.promoAttributes"
+        (filterListNodeExpanded)="viewModel.events.promoAttributeTreeChanged($event)"
+        [(ngModel)]="filtersManager.filters.promoAttribute">
+        </pp-drop-down-tree-select>
+    </pp-collapsable-wrapper>
+    <mat-divider></mat-divider>
+
+    <pp-collapsable-wrapper wrapperTitle="Promotion Duration">
+        <pp-number-range-filter 
+            ppFilter tooltipSufix="d" 
+            lableSufix="days"
+            [(ngModel)]="filtersManager.filters.promoDuration">
+        </pp-number-range-filter>
+    </pp-collapsable-wrapper>
+    <mat-divider></mat-divider>
+
+    <pp-collapsable-wrapper *ngIf="vm.campaignFilters && vm.campaignFilters.length > 0"
+        wrapperTitle="Campaigns">
+        <pp-multi-select-filter 
+            ppFilter 
+            [filtersList]="vm.campaignFilters" 
+            placeHolders="Select campaigns"
+            defaultTooltip="Select campaigns"
+            [(ngModel)]="filtersManager.filters.campaigns">
+        </pp-multi-select-filter>
+    </pp-collapsable-wrapper>
+    <mat-divider></mat-divider>
+
+    <pp-collapsable-wrapper *ngIf="vm.promoStatusFilters && vm.promoStatusFilters.length > 0"
+        wrapperTitle="Promotion Status">
+        <pp-multi-select-filter ppFilter 
+            [filtersList]="vm.promoStatusFilters"
+            placeHolders="Select promotion status" 
+            defaultTooltip="Select promo status"
+            [(ngModel)]="filtersManager.filters.promoStatus">
+        </pp-multi-select-filter>
+    </pp-collapsable-wrapper>
+    <mat-divider></mat-divider>
+
+    <pp-collapsable-wrapper *ngIf="vm.promoTypeFilters && vm.promoTypeFilters.length > 0"
+        wrapperTitle="Promotion Types">
+        <pp-multi-select-filter ppFilter 
+            [filtersList]="vm.promoTypeFilters"
+            placeHolders="Select promotion types" 
+            defaultTooltip="Select promo types"
+            [(ngModel)]="filtersManager.filters.promoTypes">
+        </pp-multi-select-filter>
+    </pp-collapsable-wrapper>
+    <mat-divider></mat-divider>
+
+    <pp-collapsable-wrapper *ngIf="vm.promoTypeSO99Filters && vm.promoTypeSO99Filters.length > 0"
+        wrapperTitle="SO99 Promotion Types">
+        <pp-multi-select-filter ppFilter 
+            [filtersList]="vm.promoTypeSO99Filters"
+            placeHolders="Select SO99 promotion types" 
+            defaultTooltip="Select SO99 promo types"
+            [(ngModel)]="filtersManager.filters.promoTypesSO99">
+        </pp-multi-select-filter>
+    </pp-collapsable-wrapper>
+    <mat-divider></mat-divider>
+</div>

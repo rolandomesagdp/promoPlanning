@@ -1,0 +1,67 @@
+<mat-card *ngIf="promotion; else spinnerBlock" class="summary-card mat-elevation-z0">
+  <mat-card-header class="summary-card-header">
+    <mat-card-title class="summary-card-title">
+      <div class="summary-card-title-container">
+        <div class="summary-card-title-left" [matTooltip]="promotion.promoName" matTooltipPosition="below"
+          matTooltipClass="pp-tooltip">
+          <span id="promotion-summary-name" class="summary-card-title-left-text">{{promotion.promoName}}</span>
+        </div>
+        <div class="summary-card-title-right">
+          <pp-promotion-status-chip [statusValue]="promotion.status"></pp-promotion-status-chip>
+          <pp-promotion-actions class="summary-card-title-right-actions"
+            *ngIf="showActionsButton" 
+            [promotion]="getPromotion()">
+          </pp-promotion-actions>
+        </div>
+      </div>
+    </mat-card-title>
+    <mat-card-subtitle class="summary-card-subtitle summary-card-description" [matTooltip]="promotion.description"
+      matTooltipPosition="below" matTooltipClass="pp-tooltip">
+      {{promotion.description}}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="summary-card-content">
+    <img class="summary-card-image" [src]="promotion.imageUrl">
+    <div class="summary-card-promotion-type">
+      <pp-promotion-type-chip [promotionTypeName]="promotion.promoType"></pp-promotion-type-chip>
+    </div>
+
+    <div class="summary-card-content-group">
+      <div class="summary-card-content-group-header">
+        <mat-card-title class="summary-card-title">Uplift</mat-card-title>
+        <pp-uplift-chip [value]="promotion.upliftPercent"></pp-uplift-chip>
+      </div>
+      <mat-card-subtitle class="summary-card-subtitle">{{promotion.uplift | number: "1.0-2"}} €</mat-card-subtitle>
+    </div>
+
+    <div class="summary-card-content-group">
+      <div class="summary-card-content-group-header">
+        <mat-card-title class="summary-card-title">Duration</mat-card-title>
+        <pp-duration-chip [duration]="promotion.duration"></pp-duration-chip>
+      </div>
+      <mat-card-subtitle class="summary-card-subtitle">{{promotion.startDate}}-{{promotion.endDate}}</mat-card-subtitle>
+    </div>
+
+    <div class="summary-card-content-group">
+      <div class="summary-card-content-group-header">
+        <mat-card-title class="summary-card-title">Participants</mat-card-title>
+      </div>
+      <mat-card-subtitle class="summary-card-subtitle">{{promotion.participantsCount | number: "1.0-0"}}
+      </mat-card-subtitle>
+    </div>
+
+    <div *ngIf="showViewPromotionLink" class="summary-card-content-group">
+      <div class="summary-card-content-group-action" (click)="viewPromotion.emit(promotion.promoId)"
+        matTooltip="Click to view promotion {{promotion.promoName}}" matTooltipPosition="below"
+        matTooltipClass="pp-tooltip">View promotion</div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<ng-template #spinnerBlock>
+  <mat-card class="summary-card mat-elevation-z0">
+    <mat-card-content class="summary-card-content">
+      <pp-spinner diameter="50"></pp-spinner>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

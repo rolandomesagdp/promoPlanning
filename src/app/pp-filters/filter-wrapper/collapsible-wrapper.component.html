@@ -1,0 +1,10 @@
+<mat-accordion class="full-width">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title class="title-container">
+                <div class="title-div">{{wrapperTitle}}</div>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-content select="[ppFilter]"></ng-content>
+    </mat-expansion-panel>
+</mat-accordion>

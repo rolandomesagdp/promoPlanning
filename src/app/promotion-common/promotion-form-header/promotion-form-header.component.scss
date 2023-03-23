@@ -1,0 +1,19 @@
+@import '../../../themes/pp-colors-palette.scss';
+
+.form-header-first-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions {
+    margin-right: 1vw;
+}
+
+.more-actions {
+    margin-top: 3%;
+}

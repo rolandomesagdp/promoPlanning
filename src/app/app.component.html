@@ -1,0 +1,10 @@
+<ng-container *ngIf="isAuthenticated(); else unauthenticated">
+  <pp-layout>
+    <router-outlet></router-outlet>
+    <pp-footer></pp-footer>
+  </pp-layout>
+</ng-container>
+
+<ng-template #unauthenticated>
+  <pp-unauthenticated-content></pp-unauthenticated-content>
+</ng-template>

@@ -1,0 +1,18 @@
+@import "../../../../themes/pp-colors-palette.scss";
+
+.error-message-container {
+    width: 97%;
+    min-height: 30vh;
+    max-height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+
+    .error-message {
+        color: $error-main;
+        font-size: 17px;
+        font-weight: 400;
+        margin-top: 8px;
+        margin-left: 15px;
+    }
+}
+

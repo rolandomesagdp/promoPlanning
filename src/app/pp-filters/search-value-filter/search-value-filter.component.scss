@@ -1,0 +1,9 @@
+@import "../../../themes/pp-colors-palette.scss";
+
+.search-field {
+    width: 67%;
+
+    &-clear-button {
+        background-color: $gray-200;
+    }
+}

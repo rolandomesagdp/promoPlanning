@@ -1,0 +1,180 @@
+<ng-container *ngIf="!promotionListManager.errorMessage; else errorMessageTemplate">
+    <pp-drawer-card>
+        <div mainpane>
+            <pp-promotion-navigation [activeNavigation]="promotionListManager.navigationItem"
+                subtitle="Keep track of your promotions"
+                itensTracking="{{promotionListManager.promostionsCount}} active promotions"
+                actionButtonTitle="Add new promotion" (actionButtonClicked)="createNewPromotion()">
+            </pp-promotion-navigation>
+
+            <div class="mat-table-container">
+                <table *ngIf="!(promotionListManager.loadingPromotions || promotionTableColumnManager.loading); else spinnerTemplate" mat-table [dataSource]="promotionListManager.promotions" class="pp-mat-table">
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-header">{{promotionTableColumnManager.getColumnHeaderName('name')}}</th>
+                        <td class="pp-mat-table-first-cell pp-mat-table-cell-content pp-mat-table-name-cell"
+                            mat-cell *matCellDef="let promotion">{{promotion.name}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="promoId">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('promoId')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{promotion.promoId}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="description">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('description')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{promotion.description}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="campaignId">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('campaignId')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{promotion.campaignId | campaign}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="promoTypeId">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('promoTypeId')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            <pp-promotion-type-chip class="pp-mat-table-chip" [promotionTypeId]="promotion.promoTypeId"></pp-promotion-type-chip>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('status')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            <pp-promotion-status-chip class="pp-mat-table-chip" [statusId]="promotion.status"></pp-promotion-status-chip></td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="sellInStartDate">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('sellInStartDate')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{promotion.sellInStartDate | date:'dd/MM/yyyy'}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="sellInEndDate">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('sellInEndDate')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{promotion.sellInEndDate | date:'dd/MM/yyyy'}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="sellOutStartDate">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('sellOutStartDate')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{promotion.sellOutStartDate | date:'dd/MM/yyyy'}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="sellOutEndDate">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('sellOutEndDate')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{promotion.sellOutEndDate | date:'dd/MM/yyyy'}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="forecast">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('forecast')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{getFormattedNumber(promotion.forecast)}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="uplift">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('uplift')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            {{getFormattedNumber(promotion.uplift)}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="upliftPercent">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            {{promotionTableColumnManager.getColumnHeaderName('upliftPercent')}}</th>
+                        <td mat-cell *matCellDef="let promotion"
+                            class="pp-mat-table-cell pp-mat-table-cell-content">
+                            <pp-uplift-chip class="pp-mat-table-chip" [value]="promotion.upliftPercent"></pp-uplift-chip>
+                    </ng-container>
+
+                    <ng-container matColumnDef="flags">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                        </th>
+                        <td mat-cell *matCellDef="let promotion" class="pp-mat-table-flag-cell">
+                            <mat-icon class="pp-mat-table-icon" *ngFor="let flag of promotion.flags"
+                                [ngStyle]="{'color': flag.color}" [matTooltip]="flag.message" matTooltipPosition="below"
+                                matTooltipClass="pp-tooltip">flag</mat-icon>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef class="pp-mat-table-cell pp-mat-table-header">
+                            Actions</th>
+                        <td mat-cell *matCellDef="let promotion" class="pp-mat-table-cell pp-mat-table-cell-content">
+                            <div class="pp-mat-table-cell-actions-container">
+                                <button [disabled]="promotion.isLocked || !actions.promotionPermissions.userCanWrite()"
+                                    class="pp-mat-table-button" (click)="viewPromotion(promotion)" mat-icon-button
+                                    matTooltip="Edit promotion '{{promotion.name}}'" matTooltipPosition="below"
+                                    matTooltipClass="pp-tooltip">
+                                    <mat-icon class="pp-mat-table-icon" [ngClass]="getActionIconClass(promotion)">
+                                        mode</mat-icon>
+                                </button>
+                                <button [disabled]="promotion.isLocked || !actions.promotionPermissions.userCanDelete()"
+                                    class="pp-mat-table-button" (click)="deletePromotion(promotion)" mat-icon-button
+                                    matTooltip="Delete promotion '{{promotion.name}}'" matTooltipPosition="below"
+                                    matTooltipClass="pp-tooltip">
+                                    <mat-icon class="pp-mat-table-icon" [ngClass]="getActionIconClass(promotion)">
+                                        delete_outline</mat-icon>
+                                </button>
+
+                                <pp-promotion-actions class="more-actions" [promotion]="promotion"
+                                    [showDeleteAction]="true"></pp-promotion-actions>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <tr class="pp-mat-table-header-row" mat-header-row
+                        *matHeaderRowDef="promotionTableColumnManager.displayedColumns; sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: promotionTableColumnManager.displayedColumns;"></tr>
+                </table>
+                <mat-paginator *ngIf="promotionListManager.promostionsCount > promotionListManager.lowerPageSize
+                    && !promotionListManager.loadingPromotions"
+                    class="pp-mat-paginator mat-elevation-z0" [length]="promotionListManager.promostionsCount"
+                    [pageIndex]="promotionListManager.pageIndex" [pageSize]="promotionListManager.pageSize"
+                    [pageSizeOptions]="promotionListManager.pageSizeOptions" [showFirstLastButtons]="true"
+                    (page)="onPageChange($event)">
+                </mat-paginator>
+
+                <ng-template #spinnerTemplate>
+                    <pp-spinner></pp-spinner>
+                </ng-template>
+            </div>
+        </div>
+
+        <div class="promotion-details" sidepane>
+            <pp-promotion-details-wrapper [promotionId]="selectedPromotionId"></pp-promotion-details-wrapper>
+        </div>
+    </pp-drawer-card>
+</ng-container>
+
+<ng-template #errorMessageTemplate>
+    <pp-error-message [errorMessage]="promotionListManager.errorMessage"></pp-error-message>
+</ng-template>

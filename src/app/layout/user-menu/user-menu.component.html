@@ -1,0 +1,20 @@
+<button class="user-info-button" mat-button [matMenuTriggerFor]="menu">
+  <div class="user-info">
+    <mat-icon class="user-icon">person</mat-icon>
+    <div class="user-name">{{user.email}}</div>
+  </div>
+</button>
+<mat-menu class="user-menu" #menu="matMenu">
+  <button mat-menu-item (click)="logout()">
+    <mat-icon class="user-menu-item-icon">directions_run</mat-icon>
+    <span class="user-menu-item-text">Logout</span>
+  </button>
+  <button mat-menu-item (click)="clearUserSession()">
+    <mat-icon class="user-menu-item-icon">person</mat-icon>
+    <span class="user-menu-item-text">Clear session</span>
+  </button>
+  <button mat-menu-item (click)="changePassword()">
+    <mat-icon class="user-menu-item-icon">vpn_key</mat-icon>
+    <span class="user-menu-item-text">Change password</span>
+  </button>
+</mat-menu>

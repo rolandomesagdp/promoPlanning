@@ -1,0 +1,17 @@
+@import '../../../../../themes/pp-colors-palette.scss';
+
+.page-card {
+    background-color: $white;
+    margin-bottom: .4%;
+    margin-left: 1%;
+    height: 89vh;
+    width: 97%;
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+
+.page-card.mat-card {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 1%;
+}

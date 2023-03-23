@@ -1,0 +1,18 @@
+.outlined-date-box {
+    height: 45px;
+}
+
+// Changing the border
+::ng-deep .outlined-date-box .dx-texteditor-input {
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf; 
+    border-bottom: 1px solid #dfdfdf;
+    border-radius: 2px;
+} 
+
+::ng-deep .outlined-date-box .dx-texteditor-buttons-container {
+    border-top: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf; 
+    border-bottom: 1px solid #dfdfdf;
+    border-radius: 2px;
+}

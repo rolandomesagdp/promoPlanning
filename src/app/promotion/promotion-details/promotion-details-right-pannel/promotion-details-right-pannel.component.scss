@@ -1,0 +1,35 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.promotion-details-title {
+    color: $gray-900;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    height: 28px;
+    margin-left: 10px;
+    padding-top: 1.5%;
+}
+
+.promotion-details-subtitle {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 10px;
+    color: $gray-500;
+}
+
+.promotion-details-body {
+    height: 807px;
+    margin-top: 25px;
+}
+
+.promotion-details-actions-devider {
+    background-color: $gray-200;
+}
+
+.promotion-details-actions {
+    margin-top: 12px;
+}

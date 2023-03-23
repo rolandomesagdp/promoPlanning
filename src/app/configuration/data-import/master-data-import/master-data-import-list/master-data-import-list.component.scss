@@ -1,0 +1,75 @@
+@import "../../../../../themes/pp-colors-palette.scss";
+@import "../../../../../themes/pp-variables-base.scss";
+
+.import-promo-page-card {
+  min-height: $content-card-min-height;
+
+  .master-data-table {
+    width: 100%;
+    border: 1px solid $gray-200;
+
+    &-header {
+        color: $black;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 133%;
+    }
+
+    &-cell {
+        text-align: center;
+    }
+
+    &-cell-content {
+        color: $black;
+        font-family: Open Sans;
+        font-family: Open Sans;
+        font-size: 14px;
+        line-height: 142%;
+        letter-spacing: 0.25px;
+    }
+
+    &-cell-tablename {
+        flex: 0 0 25%;
+    }
+
+    &-cell-importsql {
+        word-break: break-word;
+        text-align: start;
+        margin-right: 20px;
+    }
+
+    &-cell-actions {
+        flex: 0 0 100px;
+    }
+
+    &-button.mat-icon-button {
+        padding: 0;
+        min-width: 0;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        line-height: 28px;
+        border-radius: 50%;
+    }
+
+    &-icon {
+        font-size: 20px;
+    }
+    &-action-icon {
+        color: $gray-600;
+    }
+}
+  
+}
+
+.actions-container {
+    margin-bottom: .5%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.action-button {
+    margin-right: 3vw;
+}

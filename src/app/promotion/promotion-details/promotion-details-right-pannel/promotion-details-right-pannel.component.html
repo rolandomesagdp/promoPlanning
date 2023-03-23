@@ -1,0 +1,19 @@
+<ng-container *ngIf="viewModel$ | async as viewModel; else spinnerTemplate">
+    <div class="promotion-details-title">Promotion details</div>
+    <p class="promotion-details-subtitle">Review summary and edit details of your promotion</p>
+    <div class="promotion-details-body">
+        <ng-container *ngIf="!actions.editModeEnabled; else promotionFormTemplate">
+            <pp-promotion-details-read [promotion]="viewModel.promotion" [attributes]="viewModel.attributes"></pp-promotion-details-read>
+        </ng-container>
+        <ng-template #promotionFormTemplate>
+            <pp-promotion-details-form [promotion]="viewModel.promotion"></pp-promotion-details-form>
+        </ng-template>
+    </div>
+    <mat-divider class="promotion-details-actions-devider"></mat-divider>
+    <div class="promotion-details-actions">
+        <pp-promotion-details-actions [promotion]="viewModel.promotion"></pp-promotion-details-actions>
+    </div>
+</ng-container>
+<ng-template #spinnerTemplate>
+    <pp-spinner diameter="60"></pp-spinner>
+</ng-template>

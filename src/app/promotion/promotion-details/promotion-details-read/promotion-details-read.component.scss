@@ -1,0 +1,34 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.promotion-details-group {
+    margin-top: 20px;
+    width: 98%;
+}
+
+.promotion-detail-lable {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-900;
+}
+
+.promotion-detail-value {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: $text-titles;
+    margin-top: 6px;
+}
+
+.promotion-detail-period {
+    display: flex;
+    justify-content: space-between;
+
+    &-chip {
+        width: 85px;
+    }
+}

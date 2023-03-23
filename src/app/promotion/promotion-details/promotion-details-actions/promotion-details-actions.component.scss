@@ -1,0 +1,46 @@
+@import '../../../../themes/pp-colors-palette.scss';
+
+.action {
+    display: flex;
+    justify-content: flex-start;
+
+    &-button {
+        margin-left: 15px;
+        border-radius: 8px;
+
+        &-icon {
+            font-size: 18px;
+            padding-top: 2px;
+        }
+    }
+    
+    &-settings-button {
+        color: $primary-700;
+        background-color: $primary-50;
+    
+        &-icon {
+            color: $primary-main
+        }
+    }
+
+    &-save-button {
+        min-width: 92px;
+    }
+    
+    &-extra-button {
+        border: 1px solid $gray-300;
+        color: $gray-700;
+    }
+
+    &-copy-button-icon {
+        color: $gray-dark;
+    }
+
+    &-more {
+        margin-top: 8px;
+    }
+}
+
+::ng-deep .promotion-form-action-button-spinner .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: $white;
+}

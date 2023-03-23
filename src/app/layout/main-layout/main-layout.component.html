@@ -1,0 +1,13 @@
+<div class="layout-header">
+    <pp-header (menuToggle)="toggleMenuOpen()"></pp-header>
+</div>
+
+<mat-drawer-container class="layout-body" autoFocus="false" hasBackdrop="false">
+    <mat-drawer [ngClass]="getSideNavClasses()" mode="side" opened="true">
+        <pp-sidenav></pp-sidenav>
+    </mat-drawer>
+    <mat-drawer-content [ngClass]="getDrawerContentClasses()">
+        <ng-content></ng-content>
+        <ng-content></ng-content>
+    </mat-drawer-content>
+</mat-drawer-container>
