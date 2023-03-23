@@ -46,7 +46,7 @@ export class PromotionListManager<T extends IPromotionBase> extends LockManager 
 		return this.promos;
 	}
 
-	get promostionsCount(): number {
+	get promotionsCount(): number {
 		return this.promosTotalCount;
 	}
 

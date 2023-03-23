@@ -3,7 +3,7 @@
         <div mainpane>
             <pp-promotion-navigation [activeNavigation]="promotionListManager.navigationItem"
                 subtitle="Keep track of your promotions"
-                itensTracking="{{promotionListManager.promostionsCount}} active promotions"
+                itensTracking="{{promotionListManager.promotionsCount}} active promotions"
                 actionButtonTitle="Add new promotion" (actionButtonClicked)="createNewPromotion()">
             </pp-promotion-navigation>
 
@@ -155,9 +155,9 @@
                         *matHeaderRowDef="promotionTableColumnManager.displayedColumns; sticky: true"></tr>
                     <tr mat-row *matRowDef="let row; columns: promotionTableColumnManager.displayedColumns;"></tr>
                 </table>
-                <mat-paginator *ngIf="promotionListManager.promostionsCount > promotionListManager.lowerPageSize
+                <mat-paginator *ngIf="promotionListManager.promotionsCount > promotionListManager.lowerPageSize
                     && !promotionListManager.loadingPromotions"
-                    class="pp-mat-paginator mat-elevation-z0" [length]="promotionListManager.promostionsCount"
+                    class="pp-mat-paginator mat-elevation-z0" [length]="promotionListManager.promotionsCount"
                     [pageIndex]="promotionListManager.pageIndex" [pageSize]="promotionListManager.pageSize"
                     [pageSizeOptions]="promotionListManager.pageSizeOptions" [showFirstLastButtons]="true"
                     (page)="onPageChange($event)">

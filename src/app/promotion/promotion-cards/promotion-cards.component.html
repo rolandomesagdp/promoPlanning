@@ -19,9 +19,9 @@
                     <pp-spinner></pp-spinner>
                 </ng-template>
 
-                <mat-paginator *ngIf="promotionCardsManager.promostionsCount > promotionCardsManager.lowerPageSize
+                <mat-paginator *ngIf="promotionCardsManager.promotionsCount > promotionCardsManager.lowerPageSize
                 && !promotionCardsManager.loadingPromotions" class="promotion-cards-paginator mat-elevation-z0"
-                    [length]="promotionCardsManager.promostionsCount" [pageIndex]="promotionCardsManager.pageIndex"
+                    [length]="promotionCardsManager.promotionsCount" [pageIndex]="promotionCardsManager.pageIndex"
                     [pageSize]="promotionCardsManager.pageSize"
                     [pageSizeOptions]="promotionCardsManager.pageSizeOptions" [showFirstLastButtons]="true"
                     (page)="onPageChange($event)">
